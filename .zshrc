@@ -1,4 +1,5 @@
 alias ll="ls -lhAF"
+alias git-log='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;"
 alias port_listen='lsof -PRlni4TCP|awk /LISTEN/'
 alias port_established='lsof -PRlni4TCP|awk /ESTABLISHED/'
