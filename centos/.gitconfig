@@ -23,3 +23,10 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [include]
 	path = .gitconfig
+#[credential]
+#	helper = cache --timeout=3600
+#  helper = store
+#[merge]
+#	algorithm = patience
+#[merge "diff"]
+#	algorithm = patience
