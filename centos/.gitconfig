@@ -8,12 +8,6 @@
 	ignorecase = false
 	precomposeunicode = true
 	safecrlf = true
-[remote "origin"]
-	url = git@github.com:linzeyan/ansible
-	fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
 [diff]
 	algorithm = patience
 [color]
