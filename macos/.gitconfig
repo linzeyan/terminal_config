@@ -15,6 +15,7 @@
 	ui = true
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+#  project-summary = !which onefetch && onefetch
 #[include]
 #	path = .gitconfig
 #[credential]
@@ -24,3 +25,5 @@
 #	algorithm = patience
 #[merge "diff"]
 #	algorithm = patience
+#[oh-my-zsh]
+#  hide-status = 1

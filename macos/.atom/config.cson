@@ -1,0 +1,16 @@
+"*":
+  core:
+    disabledPackages: [
+      "spell-check"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontFamily: "Monaco, Menlo, Consolas, DejaVu Sans Mono, monospace"
+  "exception-reporting":
+    userId: "5c12dc7a-0427-4a7d-addb-2442493cad2e"
+  welcome:
+    showOnStartup: false
