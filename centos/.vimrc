@@ -24,7 +24,7 @@ augroup ansible_vim_fthosts
     autocmd BufNewFile,BufRead */ansible/* setfiletype yaml.ansible
 augroup END
 set backspace=2 backspace=indent,eol,start
-set cindent smartindent "autoindent
+set cindent smartindent autoindent
 set confirm
 set cursorcolumn
 set cursorline
@@ -37,3 +37,5 @@ set wrap "nowrap
 set t_Co=256
 set wildmenu wildmode=longest:list,full
 syntax on
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/

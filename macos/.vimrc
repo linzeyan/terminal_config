@@ -67,3 +67,5 @@ set cindent "自動縮排
 set tabstop=4 "tab換成幾個空格
 filetype indent on
 colorscheme torte "個人喜好顏色配置
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
