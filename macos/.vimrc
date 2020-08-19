@@ -1,36 +1,27 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
+set nocompatible  " be iMproved, required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///Users/ricky/ansible/'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-" All of your Plugins must be added before the following line
+"Plugin 'dense-analysis/ale'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'ekalinin/Dockerfile.vim'
+Bundle 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-fugitive'
+Bundle 'lepture/vim-jinja'
+"Bundle 'tbastos/vim-lua'
+"Plugin 'chr4/nginx.vim'
+Bundle 'spacewander/openresty-vim'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'file:///etc/ansible/'
 call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin on    " required
+"filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -43,29 +34,37 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-set laststatus=2  " Always show statusline
+autocmd BufNewFile,BufRead Vagrantfile* set filetype=ruby
+autocmd BufNewFile,BufRead Dockerfile* set filetype=Dockerfile
+autocmd BufNewFile,BufRead */nginx/* set filetype=nginx
+autocmd BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm,*.j2 setfiletype jinja
+augroup ansible_vim_fthosts
+    autocmd!
+    autocmd BufNewFile,BufRead */ansible/* setfiletype yaml.ansible
+augroup END
 
-set encoding=utf-8
-set fileencodings=utf-8,cp950
-syntax on "語法上色顯示
-set ai "自動縮排
-set shiftwidth=4 "設定縮排寬度4
-set expandtab "用 space 代替 tab
-set ruler "顯示右下角參數,如第幾行第幾個字
-set backspace=2 "在 insert 也可用 backspace
-set ic "設定搜尋忽略大小寫
-set hlsearch "設定高亮度顯示搜尋結果
-set incsearch "在關鍵字還沒完全輸入完畢前就顯示結果
-set smartindent "設定 smartindent
-set confirm "操作過程有衝突時，以明確的文字來詢問
-set history=200 "保留 200 個使用過的指令
-set cursorline "顯示目前的游標位置
-set number "顯示行數
-:nohl "搜尋不會有底色
-:set nowrap "字串太長不自動換行
-set cindent "自動縮排
-set tabstop=4 "tab換成幾個空格
-filetype indent on
-colorscheme torte "個人喜好顏色配置
+"colorscheme torte "desert
+"filetype off      " required
+set backspace=2 backspace=indent,eol,start
+set cindent smartindent autoindent
+set confirm
+set cursorcolumn
+"highlight CursorColumn cterm=none ctermbg=DarkMagenta ctermfg=White
+set cursorline
+"highlight CursorLine cterm=none ctermbg=DarkMagenta ctermfg=White
+set encoding=utf-8 fileencodings=utf-8,utf-16,big5,gb2312,gbk,gb18030,euc-jp,euc-kr,latin1
+set expandtab tabstop=2 softtabstop=2 shiftwidth=2
+set history=200
+set hlsearch incsearch ic
+set laststatus=2  ruler "Always show statusline
+"set mouse=a
+"set mouse=nv " 只在 Normal 以及 Visual 模式使用滑鼠，也就是取消 Insert 模式的滑鼠
+set wrap "nowrap
+"set number
+"set undodir=~/.vim/.undo// "结尾的//表示生成的文件名带有绝对路径，路径中用%替换目录分隔符，这样可以防止文件重名
+"set undofile
+set t_Co=256
+set wildmenu wildmode=longest:list,full
+syntax on
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
