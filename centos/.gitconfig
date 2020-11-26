@@ -24,3 +24,5 @@
 #	algorithm = patience
 #[merge "diff"]
 #	algorithm = patience
+[oh-my-zsh]
+  hide-status = 1
