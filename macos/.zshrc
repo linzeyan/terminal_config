@@ -126,7 +126,7 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 # }}} End configuration added by Zim install
 
-export TERM="xterm-256color"
+[[ $TMUX = "" ]] && export TERM="xterm-256color"
 alias abcdefghijklmnopqrstuvwxyz='echo OK'
 alias git-log='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;"
