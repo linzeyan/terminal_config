@@ -17,7 +17,8 @@ call vundle#end()            " required
 filetype plugin on    " required
 autocmd BufNewFile,BufRead Vagrantfile* set filetype=ruby
 autocmd BufNewFile,BufRead Dockerfile* set filetype=Dockerfile
-autocmd BufNewFile,BufRead */nginx/* set filetype=nginx
+autocmd BufNewFile,BufRead */nginx/*.conf,*/nginx/*/*.conf,*/nginx/*/*/*.conf set filetype=nginx
+autocmd BufNewFile,BufRead *.yml,*.yaml set filetype=yaml
 autocmd BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm,*.j2 setfiletype jinja
 augroup ansible_vim_fthosts
     autocmd!
