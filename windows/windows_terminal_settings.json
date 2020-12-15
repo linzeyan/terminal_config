@@ -48,7 +48,7 @@
                 "fontWeight": "normal",
                 "antialiasingMode": "grayscale",
                 "cursorShape": "filledBox",
-                "colorScheme": "Campbell",
+                "colorScheme": "One Half Dark",
                 "scrollbarState": "visible",
                 // 當這個項目設定為 true 時，視窗會在輸入時捲動至命令輸入行。 當其設定為 false 時，在您開始輸入時不會捲動視窗。
                 "snapOnInput": true,
@@ -79,7 +79,31 @@
 
     // Add custom color schemes to this array.
     // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
-    "schemes": [],
+    "schemes":
+    [
+        {
+            "name": "One Half Dark",
+            "foreground": "#DCDFE4",
+            "background": "#282C34",
+            "cursorColor": "#FFFFFF",
+            "black": "#282C34",
+            "red": "#E06C75",
+            "green": "#98C379",
+            "yellow": "#E5C07B",
+            "blue": "#61AFEF",
+            "purple": "#C678DD",
+            "cyan": "#56B6C2",
+            "white": "#DCDFE4",
+            "brightBlack": "#5A6374",
+            "brightRed": "#E06C75",
+            "brightGreen": "#98C379",
+            "brightYellow": "#E5C07B",
+            "brightBlue": "#61AFEF",
+            "brightPurple": "#C678DD",
+            "brightCyan": "#56B6C2",
+            "brightWhite": "#DCDFE4"
+        }
+    ],
 
     // Add custom actions and keybindings to this array.
     // To unbind a key combination from your defaults.json, set the command to "unbound".
