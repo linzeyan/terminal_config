@@ -37,6 +37,7 @@
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
                 "hidden": false,
+                // https://docs.microsoft.com/zh-tw/windows/terminal/customize-settings/profile-settings
                 // 標題取代
                 // "tabTitle": "shell",
                 // "suppressApplicationTitle": true,
