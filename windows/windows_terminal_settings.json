@@ -79,6 +79,7 @@
                 "hidden": false,
                 "name": "kali-linux",
                 "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "D:",
                 "cursorShape": "filledBox",
                 "fontSize": 14
             }
