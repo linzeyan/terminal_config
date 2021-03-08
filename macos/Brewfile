@@ -1,0 +1,59 @@
+tap "buo/cask-upgrade"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "openssl@1.1"
+brew "bash"
+brew "bash-completion"
+brew "curl"
+brew "docker", link: false
+brew "dos2unix"
+brew "expect"
+brew "git"
+brew "htop"
+brew "jq"
+brew "lrzsz"
+brew "mas"
+brew "mtr"
+brew "nmap"
+brew "pandoc"
+brew "python@3.9"
+brew "shc"
+brew "shellcheck"
+brew "subversion"
+brew "telnet"
+brew "tmux"
+brew "tree"
+brew "wget"
+brew "zsh"
+cask "android-file-transfer", args: { appdir: "/Applications" }
+cask "authy", args: { appdir: "/Applications" }
+cask "docker", args: { appdir: "/Applications" }
+cask "evernote", args: { appdir: "/Applications" }
+cask "firefox", args: { appdir: "/Applications" }
+cask "google-backup-and-sync", args: { appdir: "/Applications" }
+cask "google-chrome", args: { appdir: "/Applications" }
+cask "iterm2", args: { appdir: "/Applications" }
+cask "postman"
+cask "pycharm-ce", args: { appdir: "/Applications" }
+cask "skype", args: { appdir: "/Applications" }
+cask "snipaste", args: { appdir: "/Applications" }
+cask "sublime-text", args: { appdir: "/Applications" }
+cask "telegram-desktop", args: { appdir: "/Applications" }
+cask "the-unarchiver", args: { appdir: "/Applications" }
+cask "touchswitcher", args: { appdir: "/Applications" }
+cask "typora", args: { appdir: "/Applications" }
+cask "vagrant", args: { appdir: "/Applications" }
+cask "virtualbox", args: { appdir: "/Applications" }
+cask "virtualbox-extension-pack", args: { appdir: "/Applications" }
+cask "visual-studio-code", args: { appdir: "/Applications" }
+cask "vlc", args: { appdir: "/Applications" }
+cask "vmware-fusion", args: { appdir: "/Applications" }
+cask "whatsapp", args: { appdir: "/Applications" }
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
