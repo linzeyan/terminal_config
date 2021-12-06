@@ -1,0 +1,193 @@
+tap "buo/cask-upgrade"
+tap "hashicorp/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "rs/tap"
+# GitOps Continuous Delivery for Kubernetes
+brew "argocd"
+# Utility to check whether MAC addresses are already taken on a LAN
+brew "arping"
+# Utility to encode and decode base91 files
+brew "base91"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Programmable completion for Bash 3.2
+brew "bash-completion"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
+# Open source suite of directory software
+brew "openldap"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# JSON, YAML, TOML, XML, and CSV query and modification tool
+brew "dasel"
+# Perform a dhcp-request to check whether a dhcp-server is running
+brew "dhcping"
+# Pack, ship and run any application as a lightweight container
+brew "docker", link: false
+# Convert text between DOS, UNIX, and Mac formats
+brew "dos2unix"
+# Program that can automate interactive applications
+brew "expect"
+# Stack trace visualizer
+brew "flamegraph"
+# Distributed revision control system
+brew "git"
+# Render markdown on the CLI
+brew "glow"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Ping, but with a graph
+brew "gping"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Kubernetes package manager
+brew "helm"
+# HTTP load generator, ApacheBench (ab) replacement
+brew "hey"
+# Improved top (interactive process viewer)
+brew "htop"
+# Ping-like tool for HTTP requests
+brew "httping"
+# CLI wrapper for basic network utilities on macOS - ip command
+brew "iproute2mac"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Tools for zmodem/xmodem/ymodem file transfer
+brew "lrzsz"
+# Mac App Store command-line interface
+brew "mas"
+# Scalable distributed version control system
+brew "mercurial"
+# 'traceroute' and 'ping' in a single tool
+brew "mtr"
+# Port scanning utility for large networks
+brew "nmap"
+# Platform built on V8 to build network applications
+brew "node"
+# Git repository summary on your terminal
+brew "onefetch"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
+# Parse HTML at the command-line
+brew "pup"
+# Rsync for cloud storage
+brew "rclone"
+# Shell Script Compiler
+brew "shc"
+# HTTP regression testing and benchmarking utility
+brew "siege"
+# Terminal based presentation tool
+brew "slides"
+# Tail multiple Kubernetes pods & their containers
+brew "stern"
+# Version control system designed to be a better CVS
+brew "subversion"
+# TCP connect to the given IP/port combo
+brew "tcping"
+# Traceroute implementation using TCP packets
+brew "tcptraceroute"
+# User interface to the TELNET protocol
+brew "telnet"
+# Terminal multiplexer
+brew "tmux"
+# Anonymizing overlay network for TCP
+brew "tor", restart_service: true
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Compress/expand executable files
+brew "upx"
+# HTTP load testing tool and library
+brew "vegeta"
+# Internet file retriever
+brew "wget"
+# HTTP benchmarking tool
+brew "wrk"
+# Process YAML documents from the CLI
+brew "yq"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Terraform
+brew "hashicorp/tap/terraform"
+# JSON Aggregation CLI
+brew "rs/tap/jaggr"
+# iTerm2 expvar/JSON monitoring tool
+brew "rs/tap/jplot"
+# JDK from the Java User Group (JUG)
+cask "adoptopenjdk"
+# Transfer files from and to an Android smartphone
+cask "android-file-transfer", args: { appdir: "/Applications" }
+# Two-factor authentication software
+cask "authy", args: { appdir: "/Applications" }
+# Universal database tool and SQL client
+cask "dbeaver-community"
+# App to build and share containerized applications and microservices
+cask "docker"
+# App for note taking, organizing, task lists, and archiving
+cask "evernote", args: { appdir: "/Applications" }
+# Web browser
+cask "firefox", args: { appdir: "/Applications" }
+cask "font-fira-code-nerd-font"
+# Web browser
+cask "google-chrome", args: { appdir: "/Applications" }
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "google-cloud-sdk"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2", args: { appdir: "/Applications" }
+cask "kapitainsky-rclone-browser"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
+# Open source implementation of Microsoft's .NET Framework
+cask "mono-mdk-for-visual-studio"
+# Tool to create and manage Outline servers, powered by Shadowsocks
+cask "outline-manager"
+cask "pingplotter"
+# Collaboration platform for API development
+cask "postman"
+# Command-line shell and scripting language
+cask "powershell"
+# IDE for Python programming - Community Edition
+cask "pycharm-ce", args: { appdir: "/Applications" }
+# Snip or pin screenshots
+cask "snipaste", args: { appdir: "/Applications" }
+# Desktop client for Telegram messenger
+cask "telegram-desktop"
+# Unpacks archive files
+cask "the-unarchiver", args: { appdir: "/Applications" }
+# Use Touch Bar to switch apps
+cask "touchswitcher", args: { appdir: "/Applications" }
+# Free and open-source OpenVPN client
+cask "tunnelblick"
+# Configurable document editor that supports Markdown
+cask "typora", args: { appdir: "/Applications" }
+# Development environment
+cask "vagrant", args: { appdir: "/Applications" }
+# Virtualizer for x86 hardware
+cask "virtualbox", args: { appdir: "/Applications" }
+# Extend the functionality of VirtualBox
+cask "virtualbox-extension-pack", args: { appdir: "/Applications" }
+# Integrated development environment
+cask "visual-studio"
+# Open-source code editor
+cask "visual-studio-code", args: { appdir: "/Applications" }
+# Multimedia player
+cask "vlc", args: { appdir: "/Applications" }
+# Video communication and virtual meeting platform
+cask "zoom"
+mas "AdBlocker", id: 1018301773
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541

@@ -1,0 +1,75 @@
+{
+    "ansible.validate.executablePath": "ansible-lint",
+    "breadcrumbs.enabled": false,
+    "code-runner.clearPreviousOutput": true,
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "alt",
+    "editor.tabCompletion": "on",
+    "editor.wordWrap": "on",
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.options": {
+        "plugins": [
+            "html"
+        ]
+    },
+    "eslint.runtime": "",
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "html",
+    ],
+    "explorer.confirmDelete": false,
+    "files.associations": {
+        "*.yml": "yaml"
+    },
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "go.autocompleteUnimportedPackages": true,
+    "go.enableCodeLens": {
+        "references": true
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "jupyter.askForKernelRestart": false,
+    "python.pythonPath": "/usr/local/bin/python3",
+    "python.showStartPage": false,
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "settingsSync.ignoredSettings": [
+        "-ansible.validate.executablePath",
+        "-go.logging.level"
+    ],
+    "sync.autoUpload": true,
+    "sync.autoDownload": true,
+    "sync.forceUpload": true,
+    "sync.gist": "701e83589dde06da2a577169ce333d37",
+    "sync.quietSync": true,
+    "tabnine.experimentalAutoImports": true,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.fontFamily": "Monaco",
+    "terraform-ls.experimentalFeatures": {
+        "validateOnSave": true
+    },
+    "update.mode": "start",
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.iconTheme": "vscode-icons",
+    "yaml.customTags": [
+        "!encrypted/pkcs1-oaep scalar",
+        "!vault scalar"
+    ],
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true
+    },
+}

@@ -1,0 +1,28 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	autocrlf = input
+	editor = vim
+	ignorecase = false
+	precomposeunicode = true
+	safecrlf = true
+[diff]
+	algorithm = patience
+[color]
+	status = always
+	ui = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+#[include]
+#	path = .gitconfig
+#[credential]
+#	helper = cache --timeout=3600
+#  helper = store
+#[merge]
+#	algorithm = patience
+#[merge "diff"]
+#	algorithm = patience
+[oh-my-zsh]
+  hide-status = 1

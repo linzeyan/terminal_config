@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+
+set -ex
+
+GREEN='\033[0;32m'
+RESET='\033[0m'
+repoUri='https://github.com/linzeyan/terminal_config.git'
+dirName="${PWD}/terminal_config/macos"
+
+msg() {
+    echo "${GREEN}${1}${RESET}"
+}
+
+installPackages() {
+    msg "Check homebrew is installed or not."
+    if ! which brew &>/dev/null; then
+        msg "Install homebrew..."
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    else
+        msg "Update homebrew..."
+        brew update
+    fi
+
+    msg "Clone Config Repo"
+    git clone ${repoUri}
+
+    msg "Restore brew"
+    brew bundle --file="${dirName}/Brewfile"
+
+    msg "Install Fira-code"
+    brew tap homebrew/cask-fonts
+    brew install font-fira-code-nerd-font
+
+    msg "GPG"
+    brew install pinentry-mac
+    mkdir -p ~/.gnupg
+    echo 'no-tty' >~/.gnupg/gpg.conf
+    echo 'pinentry-program /usr/local/bin/pinentry-mac' >~/.gnupg/gpg-agent.conf
+}
+
+zshOMZ() {
+    msg "Clone Oh-My-Zsh"
+    git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
+
+    msg "Clone git-radar"
+    git clone https://github.com/linzeyan/git-radar.git ~/.git-radar
+}
+
+otherConfigs() {
+    msg "Configure git global config"
+    cp -f ${dirName}/.gitconfig ~
+    msg "Generate .zshrc"
+    cp -f ${dirName}/.zshrc ~/.zshrc
+    msg "Generate .vimrc"
+    cp -f ${dirName}/.vimrc ~/.vimrc
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    # git clone https://github.com/chr4/nginx.vim ~/.vim/bundle/nginx.vim
+    msg "Install Vim Plugin"
+    vim -c 'BundleInstall' -c 'q' -c 'q'
+    msg "Copy configs"
+    cp -f ${dirName}/.tmux.conf ~
+    cp -fr ${dirName}/.ssh ~
+    cp -f ${dirName}/curltime ~
+    cp -fr ${dirName}/.snipaste ~
+    msg "Copy lrzsz scripts"
+    cp -f ${dirName}/iterm2-zmodem/iterm2-* /usr/local/bin
+}
+
+zshZim() {
+    msg "Install zim"
+    curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+    cp -f ${dirName}/.zimrc ~/.zimrc
+    msg "Install PowerLevel10k"
+    zimfw install
+    cp -f ${dirName}/.p10k.zsh ~
+}
+
+installPackages
+zshZim
+otherConfigs

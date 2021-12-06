@@ -1,0 +1,37 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	autocrlf = input
+	editor = vim
+	ignorecase = false
+	precomposeunicode = true
+	safecrlf = true
+[pull]
+    ff = only
+[diff]
+	algorithm = patience
+[color]
+	status = always
+	ui = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+#  project-summary = !which onefetch && onefetch
+[user]
+	email = zeyanlin@outlook.com
+	name = Ricky
+	signingkey = 2A4313489FDCA802ED6FCC214B03D879EA73DF37
+[commit]
+	gpgsign = true
+#[include]
+#	path = .gitconfig
+#[credential]
+#	helper = cache --timeout=3600
+#  helper = store
+#[merge]
+#	algorithm = patience
+#[merge "diff"]
+#	algorithm = patience
+#[oh-my-zsh]
+#  hide-status = 1
