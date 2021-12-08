@@ -96,7 +96,7 @@ alias restore_brew='brew bundle --file="~/git/terminal_config/macos/Brewfile"'
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
 alias port_listen='lsof -PRlni4TCP|awk /LISTEN/'
 alias port_established='lsof -PRlni4TCP|awk /ESTABLISHED/'
-alias ip='for ip in $(ifconfig -l);do addr=$(ipconfig getifaddr ${ip});if [ "$(ipconfig getifaddr $ip;echo $?)" != 1 ];then echo $ip: $addr;fi;done'
+alias localip='for ip in $(ifconfig -l);do addr=$(ipconfig getifaddr ${ip});if [ "$(ipconfig getifaddr $ip;echo $?)" != 1 ];then echo $ip: $addr;fi;done'
 alias routing='netstat -rf inet'
 alias weather='curl wttr.in'
 alias oracle='ssh opc@129.146.172.132'
@@ -113,4 +113,4 @@ if [[ $(uname -s) == "Darwin" ]]; then
   . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 fi
-
+. ~/.k8s.completion
