@@ -113,4 +113,9 @@ if [[ $(uname -s) == "Darwin" ]]; then
   . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 fi
-. ~/.k8s.completion
+autoCompletion='/usr/local/share/zsh/site-functions'
+alias k='kubectl'
+alias kctx='kubectx'
+alias kns='kubens'
+[[ -f ${autoCompletion}/_kubectl ]] || kubectl completion zsh >${autoCompletion}/_kubectl
+compinit
