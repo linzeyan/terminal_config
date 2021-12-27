@@ -1,4 +1,5 @@
 tap "buo/cask-upgrade"
+tap "derailed/k9s"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -17,6 +18,8 @@ brew "base91"
 brew "bash"
 # Programmable completion for Bash 3.2
 brew "bash-completion"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Open source suite of directory software
@@ -59,8 +62,10 @@ brew "httping"
 brew "iproute2mac"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Tool that can switch between kubectl contexts easily and create aliases
-brew "kubectx"
+# Static analysis tool for Kubernetes YAML files and Helm charts
+brew "kube-linter"
+# KubeConfig Manager
+brew "kubecm"
 # Tools for zmodem/xmodem/ymodem file transfer
 brew "lrzsz"
 # Mac App Store command-line interface
@@ -151,13 +156,12 @@ cask "microsoft-teams"
 cask "mono-mdk-for-visual-studio"
 # Tool to create and manage Outline servers, powered by Shadowsocks
 cask "outline-manager"
+# Network monitoring tool
 cask "pingplotter"
 # Collaboration platform for API development
 cask "postman"
 # Command-line shell and scripting language
 cask "powershell"
-# IDE for Python programming - Community Edition
-cask "pycharm-ce", args: { appdir: "/Applications" }
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
 # Desktop client for Telegram messenger

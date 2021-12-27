@@ -115,7 +115,7 @@ if [[ $(uname -s) == "Darwin" ]]; then
 fi
 autoCompletion='/usr/local/share/zsh/site-functions'
 alias k='kubectl'
-alias kctx='kubectx'
-alias kns='kubens'
-[[ -f ${autoCompletion}/_kubectl ]] || kubectl completion zsh >${autoCompletion}/_kubectl
+alias kc='kubecm'
+. <(kubectl completion zsh)
+. /usr/local/bin/aws_zsh_completer.sh
 compinit
