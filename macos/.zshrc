@@ -91,6 +91,9 @@ alias unproxy="
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #export PROMPT="%1/%\$(git-radar --zsh) "
 #export PROMPT="%(?:%{%}➜ :%{%}➜ )%{$fg[cyan]%}%c%{$reset_color%} \$(git-radar --zsh )"
+geoip() {
+  curl ip-api.com/${1:-}
+}
 alias backup_brew='brew bundle dump --describe --force --file="~/git/terminal_config/macos/Brewfile"'
 alias restore_brew='brew bundle --file="~/git/terminal_config/macos/Brewfile"'
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
