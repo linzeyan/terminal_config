@@ -22,6 +22,8 @@ brew "bash-completion"
 brew "bat"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Core application library for C
+brew "glib"
 # Open source suite of directory software
 brew "openldap"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -30,6 +32,8 @@ brew "curl"
 brew "dasel"
 # Perform a dhcp-request to check whether a dhcp-server is running
 brew "dhcping"
+# Tool for exploring each layer in a docker image
+brew "dive"
 # Pack, ship and run any application as a lightweight container
 brew "docker", link: false
 # Convert text between DOS, UNIX, and Mac formats
@@ -46,8 +50,14 @@ brew "glow"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
 # Ping, but with a graph
 brew "gping"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Kubernetes package manager
