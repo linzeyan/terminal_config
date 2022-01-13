@@ -50,8 +50,8 @@ ZSH_HIGHLIGHT_STYLES[cursor]='bg=blue'
 # ZSH_HIGHLIGHT_STYLES[line]='bold'
 # export LANG=en_US.UTF-8
 export GOPATH=${HOME}/.go
-alias gitdiff='git diff | git-split-diffs --color | less -RFX'
-alias gitlog='git log -p | git-split-diffs --color | less -RFX'
+alias gf='git diff | git-split-diffs --color | less -RFX'
+alias gg='git log -p | git-split-diffs --color | less -RFX'
 alias list_npm_package='npm list -g --depth=0'
 alias colorPrint='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+"\n"}; done'
 # pip zsh completion start
@@ -91,9 +91,6 @@ alias unproxy="
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #export PROMPT="%1/%\$(git-radar --zsh) "
 #export PROMPT="%(?:%{%}➜ :%{%}➜ )%{$fg[cyan]%}%c%{$reset_color%} \$(git-radar --zsh )"
-geoip() {
-  curl ip-api.com/${1:-}
-}
 alias backup_brew='brew bundle dump --describe --force --file="~/git/terminal_config/macos/Brewfile"'
 alias restore_brew='brew bundle --file="~/git/terminal_config/macos/Brewfile"'
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
