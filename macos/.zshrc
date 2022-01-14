@@ -105,6 +105,7 @@ alias restoreMACaddress='networksetup -setairportpower en0 off && networksetup -
 alias sudo='/usr/local/bin/sudo'
 alias tojson='yq eval -j'
 alias toyaml='yq eval -P'
+. /usr/local/bin/library.bash
 if [[ $(uname -s) == "Darwin" ]]; then
   export PATH=${PATH}:${HOME}/Library/Python/3.9/bin:/usr/local/sbin:${GOPATH}/bin
   # The next line updates PATH for the Google Cloud SDK.
