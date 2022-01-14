@@ -50,10 +50,6 @@ ZSH_HIGHLIGHT_STYLES[cursor]='bg=blue'
 # ZSH_HIGHLIGHT_STYLES[line]='bold'
 # export LANG=en_US.UTF-8
 export GOPATH=${HOME}/.go
-alias gf='git diff | git-split-diffs --color | less -RFX'
-alias gg='git log -p | git-split-diffs --color | less -RFX'
-alias list_npm_package='npm list -g --depth=0'
-alias colorPrint='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+"\n"}; done'
 # pip zsh completion start
 function _pip_completion {
   local words cword
@@ -65,46 +61,10 @@ function _pip_completion {
 }
 compctl -K _pip_completion pip3
 # pip zsh completion end
-alias proxy="
-    export http_proxy=socks5://127.0.0.1:9050;
-    export HTTP_PROXY=socks5://127.0.0.1:9050;
-    export https_proxy=socks5://127.0.0.1:9050;
-    export HTTPS_PROXY=socks5://127.0.0.1:9050;
-    export SSH_proxy=socks5://127.0.0.1:9050;
-    export SSH_PROXY=socks5://127.0.0.1:9050;
-    export all_proxy=socks5://127.0.0.1:9050;
-    export ALL_PROXY=socks5://127.0.0.1:9050;
-    export no_proxy=socks5://127.0.0.1:9050;
-    export NO_PROXY=socks5://127.0.0.1:9050;"
-alias unproxy="
-    unset http_proxy;
-    unset HTTP_PROXY;
-    unset https_proxy;
-    unset HTTPS_PROXY;
-    unset ssh_proxy;
-    unset SSH_PROXY;
-    unset all_proxy;
-    unset ALL_PROXY;
-    unset no_proxy;
-    unset NO_PROXY"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #export PROMPT="%1/%\$(git-radar --zsh) "
 #export PROMPT="%(?:%{%}➜ :%{%}➜ )%{$fg[cyan]%}%c%{$reset_color%} \$(git-radar --zsh )"
-alias backup_brew='brew bundle dump --describe --force --file="~/git/terminal_config/macos/Brewfile"'
-alias restore_brew='brew bundle --file="~/git/terminal_config/macos/Brewfile"'
-alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
-alias port_listen='lsof -PRlni4TCP|awk /LISTEN/'
-alias port_established='lsof -PRlni4TCP|awk /ESTABLISHED/'
-alias localip='for ip in $(ifconfig -l);do addr=$(ipconfig getifaddr ${ip});if [ "$(ipconfig getifaddr $ip;echo $?)" != 1 ];then echo $ip: $addr;fi;done'
-alias routing='netstat -rf inet'
-alias weather='curl wttr.in'
-alias oracle='ssh opc@129.146.172.132'
-alias changeMACaddress='networksetup -setairportpower en0 off && networksetup -setairportpower en0 on && sudo ifconfig en0 ether 14:7d:da:aa:46:53 && sleep 5 && networksetup -setairportnetwork en0 Tstar5 && ifconfig en0 | grep ether | awk "{print \$2}"'
-alias restoreMACaddress='networksetup -setairportpower en0 off && networksetup -setairportpower en0 on && sudo ifconfig en0 ether f0:18:98:3c:c5:89 && sleep 5 && networksetup -setairportnetwork en0 Tstar5 && ifconfig en0 | grep ether | awk "{print \$2}"'
-alias sudo='/usr/local/bin/sudo'
-alias tojson='yq eval -j'
-alias toyaml='yq eval -P'
 . /usr/local/bin/library.bash
 if [[ $(uname -s) == "Darwin" ]]; then
   export PATH=${PATH}:${HOME}/Library/Python/3.9/bin:/usr/local/sbin:${GOPATH}/bin
@@ -115,8 +75,6 @@ if [[ $(uname -s) == "Darwin" ]]; then
 
 fi
 autoCompletion='/usr/local/share/zsh/site-functions'
-alias k='kubectl'
-alias kc='kubecm'
 . <(kubectl completion zsh)
 . /usr/local/bin/aws_zsh_completer.sh
 compinit
