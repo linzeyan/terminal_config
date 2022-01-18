@@ -8,6 +8,7 @@
 	ignorecase = false
 	precomposeunicode = true
 	safecrlf = true
+	excludesfile = /Users/ricky/.gitignore
 [pull]
     ff = only
 [diff]
