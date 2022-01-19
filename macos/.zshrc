@@ -31,10 +31,10 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=()
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-# Declare the variable
+## Declare the variable
 typeset -A ZSH_HIGHLIGHT_PATTERNS
 typeset -A ZSH_HIGHLIGHT_STYLES
-# To have commands starting with `rm` in red:
+## To have commands starting with `rm` in red:
 ZSH_HIGHLIGHT_PATTERNS+=('rm -f' 'fg=white,bold,bg=red')
 ZSH_HIGHLIGHT_PATTERNS+=('rm -r' 'fg=white,bold,bg=red')
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf' 'fg=white,bold,bg=red')
@@ -48,9 +48,7 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=yellow,bold'
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=magenta,bold'
 ZSH_HIGHLIGHT_STYLES[cursor]='bg=blue'
 # ZSH_HIGHLIGHT_STYLES[line]='bold'
-# export LANG=en_US.UTF-8
-export GOPATH=${HOME}/.go
-# pip zsh completion start
+## pip zsh completion start
 function _pip_completion {
   local words cword
   read -Ac words
@@ -60,20 +58,12 @@ function _pip_completion {
              PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
 }
 compctl -K _pip_completion pip3
-# pip zsh completion end
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+## pip zsh completion end
+## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-#export PROMPT="%1/%\$(git-radar --zsh) "
-#export PROMPT="%(?:%{%}➜ :%{%}➜ )%{$fg[cyan]%}%c%{$reset_color%} \$(git-radar --zsh )"
+# export PROMPT="%1/%\$(git-radar --zsh) "
+# export PROMPT="%(?:%{%}➜ :%{%}➜ )%{$fg[cyan]%}%c%{$reset_color%} \$(git-radar --zsh )"
 . /usr/local/bin/library.bash
-if [[ $(uname -s) == "Darwin" ]]; then
-  export PATH=${PATH}:${HOME}/Library/Python/3.9/bin:/usr/local/sbin:${GOPATH}/bin
-  # The next line updates PATH for the Google Cloud SDK.
-  . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-  ## The next line enables shell command completion for gcloud.
-  . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-fi
 autoCompletion='/usr/local/share/zsh/site-functions'
 . <(kubectl completion zsh)
 . /usr/local/bin/aws_zsh_completer.sh
