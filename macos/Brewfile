@@ -166,8 +166,6 @@ cask "kapitainsky-rclone-browser"
 cask "microsoft-teams"
 # Open source implementation of Microsoft's .NET Framework
 cask "mono-mdk-for-visual-studio"
-# Tool to create and manage Outline servers, powered by Shadowsocks
-cask "outline-manager"
 # Network monitoring tool
 cask "pingplotter"
 # Collaboration platform for API development
