@@ -90,6 +90,8 @@ brew "nmap"
 brew "nvm"
 # Git repository summary on your terminal
 brew "onefetch"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Pinentry for GPG on Mac
@@ -119,7 +121,7 @@ brew "telnet"
 # Terminal multiplexer
 brew "tmux"
 # Anonymizing overlay network for TCP
-brew "tor", restart_service: true
+brew "tor"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Compress/expand executable files
@@ -172,6 +174,8 @@ cask "pingplotter"
 cask "postman"
 # Command-line shell and scripting language
 cask "powershell"
+# VPN client focusing on security
+cask "protonvpn"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
 # Desktop client for Telegram messenger
@@ -182,8 +186,6 @@ cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "touchswitcher", args: { appdir: "/Applications" }
 # Free and open-source OpenVPN client
 cask "tunnelblick"
-# Configurable document editor that supports Markdown
-cask "typora", args: { appdir: "/Applications" }
 # Development environment
 cask "vagrant", args: { appdir: "/Applications" }
 # Virtualizer for x86 hardware
