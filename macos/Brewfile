@@ -8,6 +8,8 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "rs/tap"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
 # Utility to check whether MAC addresses are already taken on a LAN
@@ -46,6 +48,8 @@ brew "flamegraph"
 brew "git"
 # Render markdown on the CLI
 brew "glow"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
@@ -58,6 +62,8 @@ brew "gping"
 brew "harfbuzz"
 # Framework for layout and rendering of i18n text
 brew "pango"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Kubernetes package manager
@@ -106,6 +112,8 @@ brew "shc"
 brew "siege"
 # Terminal based presentation tool
 brew "slides"
+# Crypto and x509 Swiss-Army-Knife
+brew "step"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
 # Version control system designed to be a better CVS
@@ -172,10 +180,10 @@ cask "mono-mdk-for-visual-studio"
 cask "pingplotter"
 # Collaboration platform for API development
 cask "postman"
-# Command-line shell and scripting language
-cask "powershell"
 # VPN client focusing on security
 cask "protonvpn"
+# Modern and intuitive HTTP Debugging Proxy app
+cask "proxyman"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
 # Desktop client for Telegram messenger
@@ -204,6 +212,7 @@ mas "AdBlocker", id: 1018301773
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
