@@ -32,6 +32,8 @@ brew "openldap"
 brew "curl"
 # JSON, YAML, TOML, XML, and CSV query and modification tool
 brew "dasel"
+# CLI tool to run policies against Kubernetes manifests YAML files or Helm charts
+brew "datree"
 # Perform a dhcp-request to check whether a dhcp-server is running
 brew "dhcping"
 # Tool for exploring each layer in a docker image
@@ -220,3 +222,4 @@ mas "LINE", id: 539883307
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "WireGuard", id: 1451685025
