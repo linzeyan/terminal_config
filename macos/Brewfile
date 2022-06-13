@@ -94,6 +94,8 @@ brew "mas"
 brew "mercurial"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
+# IP address netmask generation utility
+brew "netmask"
 # Port scanning utility for large networks
 brew "nmap"
 # Manage multiple Node.js versions
@@ -162,6 +164,8 @@ cask "adoptopenjdk"
 cask "android-file-transfer", args: { appdir: "/Applications" }
 # Two-factor authentication software
 cask "authy", args: { appdir: "/Applications" }
+# Macbook | Clock, right on the touch bar
+cask "clock-bar"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # App to build and share containerized applications and microservices
@@ -171,6 +175,8 @@ cask "evernote", args: { appdir: "/Applications" }
 # Web browser
 cask "firefox", args: { appdir: "/Applications" }
 cask "font-fira-code-nerd-font"
+# Mind mapping and knowledge management software
+cask "freeplane"
 # Web browser
 cask "google-chrome", args: { appdir: "/Applications" }
 # Set of tools to manage resources and applications hosted on Google Cloud
