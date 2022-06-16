@@ -202,8 +202,6 @@ cask "snipaste", args: { appdir: "/Applications" }
 cask "telegram-desktop"
 # Unpacks archive files
 cask "the-unarchiver", args: { appdir: "/Applications" }
-# Use Touch Bar to switch apps
-cask "touchswitcher", args: { appdir: "/Applications" }
 # Free and open-source OpenVPN client
 cask "tunnelblick"
 # Development environment
