@@ -72,6 +72,8 @@ zshZim() {
     msg "Install zim"
     curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
     cp -f ${dirName}/.zimrc ~/.zimrc
+    echo "zmodule romkatv/powerlevel10k" >> ~/.zimrc
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zim/modules/powerlevel10k
     msg "Install PowerLevel10k"
     zimfw install
     cp -f ${dirName}/.p10k.zsh ~
