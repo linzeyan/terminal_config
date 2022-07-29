@@ -22,10 +22,10 @@ brew "bash"
 brew "bash-completion"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Core application library for C
 brew "glib"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Open source suite of directory software
 brew "openldap"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -50,6 +50,8 @@ brew "flamegraph"
 brew "git"
 # Render markdown on the CLI
 brew "glow"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
@@ -58,6 +60,10 @@ brew "gnupg"
 brew "go"
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
+# Fast linters runner for Go
+brew "golangci-lint"
+# Deliver Go binaries as fast and easily as possible
+brew "goreleaser"
 # Terminal based graphical activity monitor inspired by gtop and vtop
 brew "gotop"
 # Ping, but with a graph
@@ -78,6 +84,8 @@ brew "hey"
 brew "htop"
 # Ping-like tool for HTTP requests
 brew "httping"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # CLI wrapper for basic network utilities on macOS - ip command
 brew "iproute2mac"
 # Lightweight and flexible command-line JSON processor
