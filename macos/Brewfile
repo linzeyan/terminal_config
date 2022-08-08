@@ -26,6 +26,8 @@ brew "bat"
 brew "glib"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # Open source suite of directory software
 brew "openldap"
 # Get a file from an HTTP, HTTPS or FTP server
