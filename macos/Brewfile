@@ -7,6 +7,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "linzeyan/tools"
 tap "rs/tap"
 # Simple, modern, secure file encryption
 brew "age"
@@ -48,6 +49,8 @@ brew "dos2unix"
 brew "expect"
 # Stack trace visualizer
 brew "flamegraph"
+# Toolkit for image loading and pixel buffer manipulation
+brew "gdk-pixbuf"
 # Distributed revision control system
 brew "git"
 # Render markdown on the CLI
@@ -86,8 +89,6 @@ brew "hey"
 brew "htop"
 # Ping-like tool for HTTP requests
 brew "httping"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # CLI wrapper for basic network utilities on macOS - ip command
 brew "iproute2mac"
 # Lightweight and flexible command-line JSON processor
@@ -170,6 +171,7 @@ brew "yq"
 brew "zsh"
 # Terraform
 brew "hashicorp/tap/terraform"
+brew "linzeyan/tools/ops-cli"
 # JSON Aggregation CLI
 brew "rs/tap/jaggr"
 # iTerm2 expvar/JSON monitoring tool
