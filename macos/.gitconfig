@@ -29,6 +29,10 @@
 	fetch = +refs/heads/*:refs/remotes/origin/*
   push = +refs/heads/*
 	push = +refs/tags/*
+[fetch]
+	prune = true
+[help]
+	autocorrect = 1
 #[include]
 #	path = .gitconfig
 #[credential]
