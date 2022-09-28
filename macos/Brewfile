@@ -13,8 +13,6 @@ tap "rs/tap"
 brew "age"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
-# Utility to check whether MAC addresses are already taken on a LAN
-brew "arping"
 # Utility to encode and decode base91 files
 brew "base91"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -47,8 +45,6 @@ brew "docker", link: false
 brew "expect"
 # Stack trace visualizer
 brew "flamegraph"
-# Toolkit for image loading and pixel buffer manipulation
-brew "gdk-pixbuf"
 # Distributed revision control system
 brew "git"
 # Render markdown on the CLI
@@ -61,6 +57,8 @@ brew "gnutls"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
 # Fast linters runner for Go
@@ -145,8 +143,6 @@ brew "tldr"
 brew "tmux"
 # Anonymizing overlay network for TCP
 brew "tor"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Compress/expand executable files
 brew "upx"
 # HTTP load testing tool and library
