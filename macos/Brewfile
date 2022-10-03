@@ -99,8 +99,6 @@ brew "lrzsz"
 brew "mas"
 # Scalable distributed version control system
 brew "mercurial"
-# 'traceroute' and 'ping' in a single tool
-brew "mtr"
 # Port scanning utility for large networks
 brew "nmap"
 # Manage multiple Node.js versions
