@@ -45,6 +45,8 @@ brew "docker", link: false
 brew "expect"
 # Stack trace visualizer
 brew "flamegraph"
+# Terminal JSON viewer
+brew "fx"
 # Distributed revision control system
 brew "git"
 # Render markdown on the CLI
