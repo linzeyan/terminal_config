@@ -182,6 +182,8 @@ cask "dbeaver-community"
 cask "docker"
 # App for note taking, organizing, task lists, and archiving
 cask "evernote", args: { appdir: "/Applications" }
+# Open source container development tool
+cask "finch"
 # Web browser
 cask "firefox", args: { appdir: "/Applications" }
 # Developer targeted fonts with a high number of glyphs
