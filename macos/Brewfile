@@ -11,8 +11,14 @@ tap "linzeyan/tools"
 tap "rs/tap"
 # Simple, modern, secure file encryption
 brew "age"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
 # Utility to encode and decode base91 files
 brew "base91"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -21,10 +27,20 @@ brew "bash"
 brew "bash-completion"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Parser generator
+brew "bison"
+# GNU database manager
+brew "gdbm"
 # Core application library for C
 brew "glib"
+# Portable Foreign Function Interface library
+brew "libffi"
+# Library for command-line editing
+brew "readline"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Ruby environment tool
+brew "chruby"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # Open source suite of directory software
@@ -49,6 +65,8 @@ brew "expect"
 brew "flamegraph"
 # Terminal JSON viewer
 brew "fx"
+# Toolkit for image loading and pixel buffer manipulation
+brew "gdk-pixbuf"
 # Distributed revision control system
 brew "git"
 # Render markdown on the CLI
@@ -61,8 +79,6 @@ brew "gnutls"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
 # Fast linters runner for Go
@@ -89,6 +105,8 @@ brew "hey"
 brew "htop"
 # Ping-like tool for HTTP requests
 brew "httping"
+# Configurable static site generator
+brew "hugo"
 # CLI wrapper for basic network utilities on macOS - ip command
 brew "iproute2mac"
 # Lightweight and flexible command-line JSON processor
@@ -97,6 +115,8 @@ brew "jq"
 brew "kube-linter"
 # KubeConfig Manager
 brew "kubecm"
+# YAML Parser
+brew "libyaml"
 # Tools for zmodem/xmodem/ymodem file transfer
 brew "lrzsz"
 # Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
@@ -125,6 +145,8 @@ brew "pre-commit"
 brew "pup"
 # Rsync for cloud storage
 brew "rclone"
+# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
+brew "ruby-install"
 # Shell Script Compiler
 brew "shc"
 # HTTP regression testing and benchmarking utility
@@ -157,7 +179,7 @@ brew "wget"
 brew "wireguard-tools"
 # HTTP benchmarking tool
 brew "wrk"
-# Process YAML documents from the CLI
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # UNIX shell (command interpreter)
 brew "zsh"
@@ -174,6 +196,8 @@ cask "adoptopenjdk"
 cask "android-file-transfer", args: { appdir: "/Applications" }
 # Two-factor authentication software
 cask "authy", args: { appdir: "/Applications" }
+# Web browser focusing on privacy
+cask "brave-browser"
 # Macbook | Clock, right on the touch bar
 cask "clock-bar"
 # Universal database tool and SQL client
@@ -208,10 +232,12 @@ cask "pingplotter"
 cask "postman"
 # VPN client focusing on security
 cask "protonvpn"
-# Modern and intuitive HTTP Debugging Proxy app
+# HTTP debugging proxy
 cask "proxyman"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
+# IDE, client, and GUI for MongoDB
+cask "studio-3t"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # Unpacks archive files
