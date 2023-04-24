@@ -57,8 +57,6 @@ brew "dhcping"
 brew "dive"
 # Pack, ship and run any application as a lightweight container
 brew "docker", link: false
-# Tool Command Language
-brew "tcl-tk"
 # Program that can automate interactive applications
 brew "expect"
 # Stack trace visualizer
@@ -200,6 +198,8 @@ cask "authy", args: { appdir: "/Applications" }
 cask "brave-browser"
 # Macbook | Clock, right on the touch bar
 cask "clock-bar"
+# Free app that makes your Internet safer
+cask "cloudflare-warp"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # App to build and share containerized applications and microservices
@@ -230,8 +230,6 @@ cask "mono-mdk-for-visual-studio"
 cask "pingplotter"
 # Collaboration platform for API development
 cask "postman"
-# VPN client focusing on security
-cask "protonvpn"
 # HTTP debugging proxy
 cask "proxyman"
 # Snip or pin screenshots
