@@ -65,6 +65,6 @@ compctl -K _pip_completion pip3
 # export PROMPT="%(?:%{%}➜ :%{%}➜ )%{$fg[cyan]%}%c%{$reset_color%} \$(git-radar --zsh )"
 . /usr/local/bin/library.bash
 autoCompletion='/usr/local/share/zsh/site-functions'
-. <(kubectl completion zsh)
+#. <(kubectl completion zsh)
 . /usr/local/bin/aws_zsh_completer.sh
 compinit
