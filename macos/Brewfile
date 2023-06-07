@@ -57,6 +57,8 @@ brew "datree"
 brew "dhcping"
 # Tool for exploring each layer in a docker image
 brew "dive"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # Program that can automate interactive applications
 brew "expect"
 # Stack trace visualizer
@@ -85,8 +87,8 @@ brew "golangci-lint"
 brew "goreleaser"
 # Terminal based graphical activity monitor inspired by gtop and vtop
 brew "gotop"
-# Ping, but with a graph
-brew "gping"
+# Image manipulation
+brew "netpbm"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Framework for layout and rendering of i18n text
@@ -101,8 +103,6 @@ brew "helm"
 brew "hey"
 # Improved top (interactive process viewer)
 brew "htop"
-# Ping-like tool for HTTP requests
-brew "httping"
 # Configurable static site generator
 brew "hugo"
 # CLI wrapper for basic network utilities on macOS - ip command
@@ -113,6 +113,8 @@ brew "jq"
 brew "kube-linter"
 # KubeConfig Manager
 brew "kubecm"
+# Image processing and image analysis library
+brew "leptonica"
 # YAML Parser
 brew "libyaml"
 # Tools for zmodem/xmodem/ymodem file transfer
@@ -139,12 +141,12 @@ brew "openfortivpn"
 brew "pandoc"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Parse HTML at the command-line
 brew "pup"
-# Rsync for cloud storage
-brew "rclone"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
 # Shell Script Compiler
@@ -157,12 +159,12 @@ brew "slides"
 brew "step"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
-# Version control system designed to be a better CVS
-brew "subversion"
 # Easiest, most secure way to use WireGuard and 2FA
 brew "tailscale"
 # Traceroute implementation using TCP packets
 brew "tcptraceroute"
+# Free software distribution for the TeX typesetting system
+brew "texlive"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
@@ -196,14 +198,12 @@ cask "adoptopenjdk"
 cask "android-file-transfer", args: { appdir: "/Applications" }
 # Two-factor authentication software
 cask "authy", args: { appdir: "/Applications" }
-# Web browser focusing on privacy
-cask "brave-browser"
 # Macbook | Clock, right on the touch bar
 cask "clock-bar"
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
-# Universal database tool and SQL client
-cask "dbeaver-community"
+# Server and cloud storage browser
+cask "cyberduck"
 # App for note taking, organizing, task lists, and archiving
 cask "evernote", args: { appdir: "/Applications" }
 # Open source container development tool
@@ -212,32 +212,28 @@ cask "finch"
 cask "firefox", args: { appdir: "/Applications" }
 # Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
-# Mind mapping and knowledge management software
-cask "freeplane"
 # Web browser
 cask "google-chrome", args: { appdir: "/Applications" }
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2", args: { appdir: "/Applications" }
-# GUI for rclone
-cask "kapitainsky-rclone-browser"
 # Open source code editor written in Rust
 cask "lapce"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Open source implementation of Microsoft's .NET Framework
 cask "mono-mdk-for-visual-studio"
-# Network monitoring tool
-cask "pingplotter"
-# Collaboration platform for API development
-cask "postman"
+# Cloud storage client
+cask "onedrive"
+# Replacement for Docker Desktop
+cask "orbstack"
 # HTTP debugging proxy
 cask "proxyman"
+# MySQL/MariaDB database management platform
+cask "sequel-pro"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
-# IDE, client, and GUI for MongoDB
-cask "studio-3t"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # Unpacks archive files
@@ -250,14 +246,10 @@ cask "vagrant"
 cask "virtualbox", args: { appdir: "/Applications" }
 # Extend the functionality of VirtualBox
 cask "virtualbox-extension-pack", args: { appdir: "/Applications" }
-# Integrated development environment
-cask "visual-studio"
 # Open-source code editor
 cask "visual-studio-code", args: { appdir: "/Applications" }
 # Multimedia player
 cask "vlc", args: { appdir: "/Applications" }
-# Video communication and virtual meeting platform
-cask "zoom"
 mas "AdBlocker", id: 1018301773
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
@@ -267,3 +259,42 @@ mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
+vscode "ahmadalli.vscode-nginx-conf"
+vscode "be5invis.toml"
+vscode "bierner.markdown-mermaid"
+vscode "bierner.markdown-preview-github-styles"
+vscode "bmewburn.vscode-intelephense-client"
+vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
+vscode "eamodio.gitlens"
+vscode "formulahendry.code-runner"
+vscode "foxundermoon.shell-format"
+vscode "golang.go-nightly"
+vscode "hashicorp.hcl"
+vscode "hashicorp.terraform"
+vscode "hediet.vscode-drawio"
+vscode "huacnlee.autocorrect"
+vscode "jebbs.plantuml"
+vscode "kejun.devtoys"
+vscode "liamdawson.jsonnet-language"
+vscode "marcostazi.VS-code-vagrantfile"
+vscode "mdickin.markdown-shortcuts"
+vscode "ms-azuretools.vscode-docker"
+vscode "MS-CEINTL.vscode-language-pack-zh-hant"
+vscode "ms-python.isort"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-vscode-remote.remote-containers"
+vscode "mushan.vscode-paste-image"
+vscode "oderwat.indent-rainbow"
+vscode "pomdtr.excalidraw-editor"
+vscode "quicktype.quicktype"
+vscode "redhat.vscode-xml"
+vscode "redhat.vscode-yaml"
+vscode "shardulm94.trailing-spaces"
+vscode "Tim-Koehler.helm-intellisense"
+vscode "vscode-icons-team.vscode-icons"
+vscode "william-voyek.vscode-nginx"
+vscode "wingrunr21.vscode-ruby"
+vscode "xrc-inc.jsonnet-formatter"
+vscode "yzane.markdown-pdf"
+vscode "yzhang.markdown-all-in-one"
