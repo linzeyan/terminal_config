@@ -15,6 +15,8 @@ brew "act"
 brew "age"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# New file format for still image compression
+brew "jpeg-xl"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -57,6 +59,8 @@ brew "dhcping"
 brew "dive"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# .NET Core
+brew "dotnet"
 # Program that can automate interactive applications
 brew "expect"
 # Stack trace visualizer
@@ -103,6 +107,8 @@ brew "hey"
 brew "htop"
 # Configurable static site generator
 brew "hugo"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # CLI wrapper for basic network utilities on macOS - ip command
 brew "iproute2mac"
 # Lightweight and flexible command-line JSON processor
@@ -113,6 +119,8 @@ brew "kube-linter"
 brew "kubecm"
 # Image processing and image analysis library
 brew "leptonica"
+# C library SSHv1/SSHv2 client and server protocols
+brew "libssh"
 # YAML Parser
 brew "libyaml"
 # Tools for zmodem/xmodem/ymodem file transfer
@@ -139,6 +147,8 @@ brew "onefetch"
 brew "openfortivpn"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Tool for visualizing differences between two pdf files
+brew "pdf-diff"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Tool for creating isolated virtual python environments
@@ -165,6 +175,8 @@ brew "stern"
 brew "tailscale"
 # Traceroute implementation using TCP packets
 brew "tcptraceroute"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
 # Free software distribution for the TeX typesetting system
 brew "texlive"
 # Simplified and community-driven man pages
@@ -200,6 +212,8 @@ cask "adoptopenjdk"
 cask "android-file-transfer", args: { appdir: "/Applications" }
 # Two-factor authentication software
 cask "authy", args: { appdir: "/Applications" }
+# Data management tool that enables working with SQL Server
+cask "azure-data-studio"
 # Macbook | Clock, right on the touch bar
 cask "clock-bar"
 # Free app that makes your Internet safer
@@ -232,6 +246,8 @@ cask "onedrive"
 cask "orbstack"
 # HTTP debugging proxy
 cask "proxyman"
+# Data science software focusing on R and Python
+cask "rstudio"
 # MySQL/MariaDB database management platform
 cask "sequel-pro"
 # Snip or pin screenshots
@@ -253,6 +269,7 @@ cask "visual-studio-code", args: { appdir: "/Applications" }
 # Multimedia player
 cask "vlc", args: { appdir: "/Applications" }
 mas "AdBlocker", id: 1018301773
+mas "Amphetamine", id: 937984704
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
@@ -268,6 +285,7 @@ vscode "bierner.markdown-preview-github-styles"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "dvirtz.parquet-viewer"
 vscode "eamodio.gitlens"
+vscode "EditorConfig.EditorConfig"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
 vscode "golang.go-nightly"
