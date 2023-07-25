@@ -47,8 +47,6 @@ brew "python@3.9"
 brew "chruby"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
-# Open source suite of directory software
-brew "openldap"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # JSON, YAML, TOML, XML, and CSV query and modification tool
@@ -131,8 +129,6 @@ brew "libssh"
 brew "libyaml"
 # Tools for zmodem/xmodem/ymodem file transfer
 brew "lrzsz"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3", link: false
 # Fast, async, resource-friendly link checker
 brew "lychee"
 # Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
@@ -250,8 +246,6 @@ cask "microsoft-teams"
 cask "mono-mdk-for-visual-studio"
 # Cloud storage client
 cask "onedrive"
-# JDK from Oracle
-cask "oracle-jdk"
 # Replacement for Docker Desktop
 cask "orbstack"
 # HTTP debugging proxy
@@ -262,6 +256,8 @@ cask "rstudio"
 cask "sequel-pro"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
+# Text editor for code, markup and prose
+cask "sublime-text"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # Unpacks archive files
@@ -291,11 +287,13 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
 vscode "ahmadalli.vscode-nginx-conf"
+vscode "batisteo.vscode-django"
 vscode "be5invis.toml"
 vscode "bierner.markdown-mermaid"
 vscode "bierner.markdown-preview-github-styles"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
-vscode "dvirtz.parquet-viewer"
+vscode "donjayamanne.python-environment-manager"
+vscode "donjayamanne.python-extension-pack"
 vscode "eamodio.gitlens"
 vscode "EditorConfig.EditorConfig"
 vscode "formulahendry.code-runner"
@@ -308,27 +306,30 @@ vscode "huacnlee.autocorrect"
 vscode "humao.rest-client"
 vscode "jebbs.plantuml"
 vscode "kejun.devtoys"
+vscode "KevinRose.vsc-python-indent"
 vscode "mdickin.markdown-shortcuts"
 vscode "mhutchie.git-graph"
-vscode "Mikhail-Arkhipov.r"
 vscode "ms-azuretools.vscode-docker"
 vscode "MS-CEINTL.vscode-language-pack-zh-hant"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-vscode-remote.remote-containers"
 vscode "mushan.vscode-paste-image"
+vscode "njpwerner.autodocstring"
 vscode "oderwat.indent-rainbow"
 vscode "pomdtr.excalidraw-editor"
 vscode "quicktype.quicktype"
-vscode "RDebugger.r-debugger"
+vscode "RandomFractalsInc.vscode-data-preview"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
-vscode "REditorSupport.r"
 vscode "shardulm94.trailing-spaces"
 vscode "TabbyML.vscode-tabby"
 vscode "Tim-Koehler.helm-intellisense"
 vscode "usernamehw.errorlens"
+vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
+vscode "VisualStudioExptTeam.vscodeintellicode"
 vscode "vscode-icons-team.vscode-icons"
+vscode "wholroyd.jinja"
 vscode "william-voyek.vscode-nginx"
 vscode "xrc-inc.jsonnet-formatter"
 vscode "yzane.markdown-pdf"
