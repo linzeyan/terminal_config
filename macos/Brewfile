@@ -69,6 +69,8 @@ brew "flamegraph"
 brew "fx"
 # GNU compiler collection
 brew "gcc"
+# GNU debugger
+brew "gdb"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
 # Distributed revision control system
@@ -117,6 +119,8 @@ brew "iproute2mac"
 brew "jenv"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Command-line tool to kill processes listening on a specific port
+brew "killport"
 # Static analysis tool for Kubernetes YAML files and Helm charts
 brew "kube-linter"
 # KubeConfig Manager
@@ -173,6 +177,8 @@ brew "shc"
 brew "siege"
 # Terminal based presentation tool
 brew "slides"
+# Cross-platform application to monitor your network traffic
+brew "sniffnet"
 # Crypto and x509 Swiss-Army-Knife
 brew "step"
 # Tail multiple Kubernetes pods & their containers
@@ -256,8 +262,6 @@ cask "rstudio"
 cask "sequel-pro"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
-# Text editor for code, markup and prose
-cask "sublime-text"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # Unpacks archive files
@@ -276,6 +280,8 @@ cask "visual-studio-code", args: { appdir: "/Applications" }
 cask "vlc", args: { appdir: "/Applications" }
 # Rust-based terminal
 cask "warp"
+# Network protocol analyzer
+cask "wireshark"
 mas "AdBlocker", id: 1018301773
 mas "Amphetamine", id: 937984704
 mas "GarageBand", id: 682658836
@@ -286,6 +292,7 @@ mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
+vscode "adamhartford.vscode-base64"
 vscode "ahmadalli.vscode-nginx-conf"
 vscode "batisteo.vscode-django"
 vscode "be5invis.toml"
@@ -296,9 +303,14 @@ vscode "donjayamanne.python-environment-manager"
 vscode "donjayamanne.python-extension-pack"
 vscode "eamodio.gitlens"
 vscode "EditorConfig.EditorConfig"
+vscode "esbenp.prettier-vscode"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
+vscode "GitHub.copilot"
 vscode "golang.go-nightly"
+vscode "GraphQL.vscode-graphql"
+vscode "GraphQL.vscode-graphql-syntax"
+vscode "Gruntfuggly.todo-tree"
 vscode "hashicorp.hcl"
 vscode "hashicorp.terraform"
 vscode "hediet.vscode-drawio"
@@ -307,16 +319,20 @@ vscode "humao.rest-client"
 vscode "jebbs.plantuml"
 vscode "kejun.devtoys"
 vscode "KevinRose.vsc-python-indent"
+vscode "llvm-vs-code-extensions.vscode-clangd"
+vscode "matt-meyers.vscode-dbml"
 vscode "mdickin.markdown-shortcuts"
 vscode "mhutchie.git-graph"
 vscode "ms-azuretools.vscode-docker"
 vscode "MS-CEINTL.vscode-language-pack-zh-hant"
 vscode "ms-python.isort"
 vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
 vscode "ms-vscode-remote.remote-containers"
 vscode "mushan.vscode-paste-image"
 vscode "njpwerner.autodocstring"
 vscode "oderwat.indent-rainbow"
+vscode "pbkit.vscode-pbkit"
 vscode "pomdtr.excalidraw-editor"
 vscode "quicktype.quicktype"
 vscode "RandomFractalsInc.vscode-data-preview"
@@ -334,3 +350,5 @@ vscode "william-voyek.vscode-nginx"
 vscode "xrc-inc.jsonnet-formatter"
 vscode "yzane.markdown-pdf"
 vscode "yzhang.markdown-all-in-one"
+vscode "ZainChen.json"
+vscode "zxh404.vscode-proto3"
