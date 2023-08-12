@@ -66,5 +66,8 @@ compctl -K _pip_completion pip3
 . /usr/local/bin/library.bash
 autoCompletion='/usr/local/share/zsh/site-functions'
 #. <(kubectl completion zsh)
-. /usr/local/bin/aws_zsh_completer.sh
+HOMEBREW_BIN='/opt/homebrew/bin'
+PYTHON_BIN="${HOME}/Library/Python/3.9/bin"
+export PATH=${PATH}:${HOMEBREW_BIN}:${PYTHON_BIN}
 compinit
+. ${PYTHON_BIN}/aws_zsh_completer.sh

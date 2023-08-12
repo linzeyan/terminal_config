@@ -15,7 +15,7 @@ installPackages() {
     msg "Check homebrew is installed or not."
     if ! which brew &>/dev/null; then
         msg "Install homebrew..."
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     else
         msg "Update homebrew..."
         brew update
@@ -34,7 +34,7 @@ installPackages() {
     msg "GPG"
     brew install pinentry-mac
     mkdir -p ~/.gnupg
-    echo 'no-tty' >~/.gnupg/gpg.conf
+    # echo 'no-tty' >~/.gnupg/gpg.conf
     echo 'pinentry-program /usr/local/bin/pinentry-mac' >~/.gnupg/gpg-agent.conf
 }
 
@@ -65,14 +65,15 @@ otherConfigs() {
     cp -f ${dirName}/curltime ~
     cp -fr ${dirName}/.snipaste ~
     msg "Copy lrzsz scripts"
-    cp -f ${dirName}/iterm2-zmodem/iterm2-* /usr/local/bin
+    sudo cp -f ${dirName}/iterm2-zmodem/iterm2-* /usr/local/bin
+    sudo xcodebuild -license accept
 }
 
 zshZim() {
     msg "Install zim"
     curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
     cp -f ${dirName}/.zimrc ~/.zimrc
-    echo "zmodule romkatv/powerlevel10k" >> ~/.zimrc
+    echo "zmodule romkatv/powerlevel10k" >>~/.zimrc
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zim/modules/powerlevel10k
     msg "Install PowerLevel10k"
     zimfw install
