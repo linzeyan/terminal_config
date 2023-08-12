@@ -31,20 +31,16 @@ brew "bash-completion"
 brew "bat"
 # Parser generator
 brew "bison"
-# GNU database manager
-brew "gdbm"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
 # Core application library for C
 brew "glib"
-# Portable Foreign Function Interface library
-brew "libffi"
-# Library for command-line editing
-brew "readline"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Ruby environment tool
 brew "chruby"
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+brew "clang-format"
+# Library for command-line editing
+brew "readline"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -69,8 +65,8 @@ brew "flamegraph"
 brew "fx"
 # GNU compiler collection
 brew "gcc"
-# GNU debugger
-brew "gdb"
+# GNU database manager
+brew "gdbm"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
 # Distributed revision control system
@@ -103,6 +99,8 @@ brew "pango"
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Next generation open source RPC library and framework
+brew "grpc"
 # Kubernetes package manager
 brew "helm"
 # HTTP load generator, ApacheBench (ab) replacement
@@ -127,6 +125,8 @@ brew "kube-linter"
 brew "kubecm"
 # Image processing and image analysis library
 brew "leptonica"
+# Portable Foreign Function Interface library
+brew "libffi"
 # C library SSHv1/SSHv2 client and server protocols
 brew "libssh"
 # YAML Parser
@@ -163,8 +163,14 @@ brew "pinentry-mac"
 brew "virtualenv"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Go support for Google's protocol buffers
+brew "protoc-gen-go"
+# Protoc plugin that generates code for gRPC-Go clients
+brew "protoc-gen-go-grpc"
 # Parse HTML at the command-line
 brew "pup"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Software environment for statistical computing
 brew "r"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
@@ -177,8 +183,6 @@ brew "shc"
 brew "siege"
 # Terminal based presentation tool
 brew "slides"
-# Cross-platform application to monitor your network traffic
-brew "sniffnet"
 # Crypto and x509 Swiss-Army-Knife
 brew "step"
 # Tail multiple Kubernetes pods & their containers
@@ -197,8 +201,6 @@ brew "tldr"
 brew "tmux"
 # Anonymizing overlay network for TCP
 brew "tor"
-# Compress/expand executable files
-brew "upx"
 # HTTP load testing tool and library
 brew "vegeta"
 # Internet file retriever
@@ -220,8 +222,12 @@ brew "rs/tap/jaggr"
 brew "rs/tap/jplot"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
+# GraphQL client
+cask "altair-graphql-client"
 # Transfer files from and to an Android smartphone
 cask "android-file-transfer", args: { appdir: "/Applications" }
+# Redis desktop manager
+cask "another-redis-desktop-manager"
 # Two-factor authentication software
 cask "authy", args: { appdir: "/Applications" }
 # Data management tool that enables working with SQL Server
@@ -248,6 +254,8 @@ cask "google-cloud-sdk"
 cask "iterm2", args: { appdir: "/Applications" }
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
+# Interactive tool for analyzing MongoDB data
+cask "mongodb-compass"
 # Open source implementation of Microsoft's .NET Framework
 cask "mono-mdk-for-visual-studio"
 # Cloud storage client
@@ -262,6 +270,10 @@ cask "rstudio"
 cask "sequel-pro"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
+# IDE, client, and GUI for MongoDB
+cask "studio-3t"
+# Text editor for code, markup and prose
+cask "sublime-text"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # Unpacks archive files
