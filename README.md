@@ -46,8 +46,9 @@ wget -qO- https://raw.githubusercontent.com/linzeyan/terminal_config/master/maco
 
 1. 在低光源下調整鍵盤亮度 —> off
 2. 鍵盤亮度 —> 0
-3. 文字輸入 —> 編輯 —> 單引號、雙引號
-4. 聽寫 —> 快速鍵 —> 按下 fn 兩次
+3. 文字輸入 -> 輸入方式 —> 編輯 —> 單引號、雙引號
+4. 文字輸入 -> 輸入方式 -> 編輯 -> 自動切換至文件的輸入方式 -> on
+5. 聽寫 —> 快速鍵 —> 按下 fn 兩次
 
 #### 觸控式軌跡板
 
