@@ -266,8 +266,8 @@ cask "orbstack"
 cask "proxyman"
 # Data science software focusing on R and Python
 cask "rstudio"
-# MySQL/MariaDB database management platform
-cask "sequel-pro"
+# MySQL/MariaDB database management
+cask "sequel-ace"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
 # IDE, client, and GUI for MongoDB
