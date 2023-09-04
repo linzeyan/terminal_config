@@ -64,10 +64,15 @@ compctl -K _pip_completion pip3
 # export PROMPT="%1/%\$(git-radar --zsh) "
 # export PROMPT="%(?:%{%}➜ :%{%}➜ )%{$fg[cyan]%}%c%{$reset_color%} \$(git-radar --zsh )"
 . /usr/local/bin/library.bash
-autoCompletion='/usr/local/share/zsh/site-functions'
 #. <(kubectl completion zsh)
-HOMEBREW_BIN='/opt/homebrew/bin'
-PYTHON_BIN="${HOME}/Library/Python/3.9/bin"
-export PATH=${PATH}:${HOMEBREW_BIN}:${PYTHON_BIN}
-compinit
+
+if type brew &>/dev/null; then
+  HOMEBREW_PREFIX=$(brew --prefix)
+  autoCompletion="${HOMEBREW_PREFIX}/share/zsh/site-functions"
+  fpath=("${autoCompletion}" $fpath)
+
+  #rm -f ~/.zcompdump
+  autoload -Uz compinit
+  compinit
+fi
 . ${PYTHON_BIN}/aws_zsh_completer.sh
