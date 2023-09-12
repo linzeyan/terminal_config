@@ -125,6 +125,8 @@ brew "kube-linter"
 brew "kubecm"
 # Image processing and image analysis library
 brew "leptonica"
+# Multi-format archive and compression library
+brew "libarchive"
 # Portable Foreign Function Interface library
 brew "libffi"
 # C library SSHv1/SSHv2 client and server protocols
@@ -155,6 +157,8 @@ brew "openfortivpn"
 brew "openjdk"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
 # Tool for visualizing differences between two pdf files
 brew "pdf-diff"
 # Pinentry for GPG on Mac
@@ -167,12 +171,16 @@ brew "pre-commit"
 brew "protoc-gen-go"
 # Protoc plugin that generates code for gRPC-Go clients
 brew "protoc-gen-go-grpc"
+# Cloud native development platform
+brew "pulumi"
 # Parse HTML at the command-line
 brew "pup"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Software environment for statistical computing
 brew "r"
+# Utility that provides fast incremental file transfer
+brew "rsync"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
 # Fast and accurate code counter with complexity and COCOMO estimates
@@ -240,8 +248,6 @@ cask "cloudflare-warp"
 cask "cyberduck"
 # App for note taking, organizing, task lists, and archiving
 cask "evernote", args: { appdir: "/Applications" }
-# Open source container development tool
-cask "finch"
 # Web browser
 cask "firefox", args: { appdir: "/Applications" }
 # Developer targeted fonts with a high number of glyphs
@@ -252,6 +258,8 @@ cask "google-chrome", args: { appdir: "/Applications" }
 cask "google-cloud-sdk"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2", args: { appdir: "/Applications" }
+# Application to spoof your iOS, iPadOS or iPhoneSimulator device location
+cask "locationsimulator"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Interactive tool for analyzing MongoDB data
@@ -276,6 +284,8 @@ cask "studio-3t"
 cask "sublime-text"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
+# Disposable email client
+cask "tempbox"
 # Unpacks archive files
 cask "the-unarchiver", args: { appdir: "/Applications" }
 # Free and open-source OpenVPN client
@@ -305,17 +315,20 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
 vscode "adamhartford.vscode-base64"
+vscode "adpyke.codesnap"
 vscode "ahmadalli.vscode-nginx-conf"
 vscode "batisteo.vscode-django"
 vscode "be5invis.toml"
 vscode "bierner.markdown-mermaid"
 vscode "bierner.markdown-preview-github-styles"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
+vscode "christian-kohler.path-intellisense"
 vscode "donjayamanne.python-environment-manager"
 vscode "donjayamanne.python-extension-pack"
 vscode "eamodio.gitlens"
 vscode "EditorConfig.EditorConfig"
 vscode "esbenp.prettier-vscode"
+vscode "ezforo.copy-relative-path-and-line-numbers"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
 vscode "GitHub.copilot"
@@ -331,17 +344,21 @@ vscode "humao.rest-client"
 vscode "jebbs.plantuml"
 vscode "kejun.devtoys"
 vscode "KevinRose.vsc-python-indent"
+vscode "kisstkondoros.vscode-gutter-preview"
 vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "matt-meyers.vscode-dbml"
 vscode "mdickin.markdown-shortcuts"
 vscode "mhutchie.git-graph"
+vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-docker"
 vscode "MS-CEINTL.vscode-language-pack-zh-hant"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.makefile-tools"
 vscode "mushan.vscode-paste-image"
+vscode "nhoizey.gremlins"
 vscode "njpwerner.autodocstring"
 vscode "oderwat.indent-rainbow"
 vscode "pbkit.vscode-pbkit"
@@ -351,8 +368,10 @@ vscode "RandomFractalsInc.vscode-data-preview"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "shardulm94.trailing-spaces"
+vscode "streetsidesoftware.code-spell-checker"
 vscode "TabbyML.vscode-tabby"
 vscode "Tim-Koehler.helm-intellisense"
+vscode "tombonnike.vscode-status-bar-format-toggle"
 vscode "usernamehw.errorlens"
 vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
 vscode "VisualStudioExptTeam.vscodeintellicode"
