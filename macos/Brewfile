@@ -2,10 +2,8 @@ tap "buo/cask-upgrade"
 tap "derailed/k9s"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "linzeyan/tools"
 tap "rs/tap"
@@ -17,6 +15,8 @@ brew "age"
 brew "xz"
 # New file format for still image compression
 brew "jpeg-xl"
+# Codec library for encoding and decoding AV1 video streams
+brew "aom"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -29,6 +29,8 @@ brew "bash"
 brew "bash-completion"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Parser generator
 brew "bison"
 # GNU internationalization (i18n) and localization (l10n) library
@@ -53,6 +55,8 @@ brew "datree"
 brew "dhcping"
 # Tool for exploring each layer in a docker image
 brew "dive"
+# Synchronize your DNS to multiple providers from a simple DSL
+brew "dnscontrol"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # .NET Core
@@ -65,6 +69,10 @@ brew "flamegraph"
 brew "fx"
 # GNU compiler collection
 brew "gcc"
+# Library for encoding and decoding .avif files
+brew "libavif"
+# Graphics library to dynamically manipulate images
+brew "gd"
 # GNU database manager
 brew "gdbm"
 # Toolkit for image loading and pixel buffer manipulation
@@ -260,14 +268,8 @@ cask "google-cloud-sdk"
 cask "iterm2", args: { appdir: "/Applications" }
 # Application to spoof your iOS, iPadOS or iPhoneSimulator device location
 cask "locationsimulator"
-# Meet, chat, call, and collaborate in just one place
-cask "microsoft-teams"
 # Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
-# Open source implementation of Microsoft's .NET Framework
-cask "mono-mdk-for-visual-studio"
-# Cloud storage client
-cask "onedrive"
 # Replacement for Docker Desktop
 cask "orbstack"
 # HTTP debugging proxy
@@ -292,28 +294,12 @@ cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "tunnelblick"
 # Development environment
 cask "vagrant"
-# Virtualizer for x86 hardware
-cask "virtualbox", args: { appdir: "/Applications" }
-# Extend the functionality of VirtualBox
-cask "virtualbox-extension-pack", args: { appdir: "/Applications" }
 # Open-source code editor
-cask "visual-studio-code", args: { appdir: "/Applications" }
+cask "visual-studio-code"
 # Multimedia player
 cask "vlc", args: { appdir: "/Applications" }
-# Rust-based terminal
-cask "warp"
 # Network protocol analyzer
 cask "wireshark"
-mas "AdBlocker", id: 1018301773
-mas "Amphetamine", id: 937984704
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "LINE", id: 539883307
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Xcode", id: 497799835
 vscode "adamhartford.vscode-base64"
 vscode "adpyke.codesnap"
 vscode "ahmadalli.vscode-nginx-conf"
@@ -325,6 +311,7 @@ vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "christian-kohler.path-intellisense"
 vscode "donjayamanne.python-environment-manager"
 vscode "donjayamanne.python-extension-pack"
+vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
 vscode "EditorConfig.EditorConfig"
 vscode "esbenp.prettier-vscode"
@@ -332,6 +319,7 @@ vscode "ezforo.copy-relative-path-and-line-numbers"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
 vscode "GitHub.copilot"
+vscode "GitHub.copilot-chat"
 vscode "golang.go-nightly"
 vscode "GraphQL.vscode-graphql"
 vscode "GraphQL.vscode-graphql-syntax"
@@ -341,7 +329,9 @@ vscode "hashicorp.terraform"
 vscode "hediet.vscode-drawio"
 vscode "huacnlee.autocorrect"
 vscode "humao.rest-client"
+vscode "inferrinizzard.prettier-sql-vscode"
 vscode "jebbs.plantuml"
+vscode "jinliming2.vscode-go-template"
 vscode "kejun.devtoys"
 vscode "KevinRose.vsc-python-indent"
 vscode "kisstkondoros.vscode-gutter-preview"
@@ -367,9 +357,12 @@ vscode "quicktype.quicktype"
 vscode "RandomFractalsInc.vscode-data-preview"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
+vscode "rust-lang.rust-analyzer"
+vscode "serayuzgur.crates"
 vscode "shardulm94.trailing-spaces"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "TabbyML.vscode-tabby"
+vscode "TabNine.tabnine-vscode"
 vscode "Tim-Koehler.helm-intellisense"
 vscode "tombonnike.vscode-status-bar-format-toggle"
 vscode "usernamehw.errorlens"
