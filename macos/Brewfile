@@ -5,6 +5,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
+tap "kubefirst/tools"
 tap "linzeyan/tools"
 tap "rs/tap"
 # Run your GitHub Actions locally
@@ -125,8 +126,20 @@ brew "iproute2mac"
 brew "jenv"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Little helper to run CNCF's k3s in Docker
+brew "k3d"
+# Modern load testing tool, using Go and JavaScript
+brew "k6"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
 # Command-line tool to kill processes listening on a specific port
 brew "killport"
+# Run local Kubernetes cluster in Docker
+brew "kind"
+# Tool to move from `docker-compose` to Kubernetes
+brew "kompose"
+# CLI tool to discover unused Kubernetes resources
+brew "kor"
 # Static analysis tool for Kubernetes YAML files and Helm charts
 brew "kube-linter"
 # KubeConfig Manager
@@ -153,6 +166,8 @@ brew "mas"
 brew "mercurial"
 # Like sed, awk, cut, join & sort for name-indexed data such as CSV
 brew "miller"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
 # Port scanning utility for large networks
 brew "nmap"
 # Manage multiple Node.js versions
@@ -199,6 +214,8 @@ brew "shc"
 brew "siege"
 # Terminal based presentation tool
 brew "slides"
+# Editor of encrypted files
+brew "sops"
 # Crypto and x509 Swiss-Army-Knife
 brew "step"
 # Tail multiple Kubernetes pods & their containers
@@ -231,6 +248,7 @@ brew "yq"
 brew "zsh"
 # Terraform
 brew "hashicorp/tap/terraform"
+brew "kubefirst/tools/kubefirst"
 brew "linzeyan/tools/ops-cli"
 # JSON Aggregation CLI
 brew "rs/tap/jaggr"
@@ -270,6 +288,8 @@ cask "iterm2", args: { appdir: "/Applications" }
 cask "locationsimulator"
 # Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
+# Cross-platform MQTT 5.0 Desktop Client
+cask "mqttx"
 # Replacement for Docker Desktop
 cask "orbstack"
 # HTTP debugging proxy
@@ -300,17 +320,25 @@ cask "visual-studio-code"
 cask "vlc", args: { appdir: "/Applications" }
 # Network protocol analyzer
 cask "wireshark"
+mas "AdBlocker", id: 1018301773
+mas "Amphetamine", id: 937984704
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
 vscode "adamhartford.vscode-base64"
 vscode "adpyke.codesnap"
 vscode "ahmadalli.vscode-nginx-conf"
-vscode "batisteo.vscode-django"
 vscode "be5invis.toml"
 vscode "bierner.markdown-mermaid"
 vscode "bierner.markdown-preview-github-styles"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "christian-kohler.path-intellisense"
-vscode "donjayamanne.python-environment-manager"
-vscode "donjayamanne.python-extension-pack"
+vscode "cipchk.zh-hans-tt-hant-vscode"
 vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
 vscode "EditorConfig.EditorConfig"
@@ -321,6 +349,7 @@ vscode "foxundermoon.shell-format"
 vscode "GitHub.copilot"
 vscode "GitHub.copilot-chat"
 vscode "golang.go-nightly"
+vscode "googlecloudtools.cloudcode"
 vscode "GraphQL.vscode-graphql"
 vscode "GraphQL.vscode-graphql-syntax"
 vscode "Gruntfuggly.todo-tree"
@@ -328,12 +357,10 @@ vscode "hashicorp.hcl"
 vscode "hashicorp.terraform"
 vscode "hediet.vscode-drawio"
 vscode "huacnlee.autocorrect"
-vscode "humao.rest-client"
 vscode "inferrinizzard.prettier-sql-vscode"
 vscode "jebbs.plantuml"
 vscode "jinliming2.vscode-go-template"
 vscode "kejun.devtoys"
-vscode "KevinRose.vsc-python-indent"
 vscode "kisstkondoros.vscode-gutter-preview"
 vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "matt-meyers.vscode-dbml"
@@ -342,16 +369,14 @@ vscode "mhutchie.git-graph"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-docker"
 vscode "MS-CEINTL.vscode-language-pack-zh-hant"
-vscode "ms-python.isort"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
 vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode.makefile-tools"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.remote-explorer"
 vscode "mushan.vscode-paste-image"
 vscode "nhoizey.gremlins"
-vscode "njpwerner.autodocstring"
 vscode "oderwat.indent-rainbow"
-vscode "pbkit.vscode-pbkit"
 vscode "pomdtr.excalidraw-editor"
 vscode "quicktype.quicktype"
 vscode "RandomFractalsInc.vscode-data-preview"
@@ -361,17 +386,11 @@ vscode "rust-lang.rust-analyzer"
 vscode "serayuzgur.crates"
 vscode "shardulm94.trailing-spaces"
 vscode "streetsidesoftware.code-spell-checker"
-vscode "TabbyML.vscode-tabby"
 vscode "TabNine.tabnine-vscode"
 vscode "Tim-Koehler.helm-intellisense"
 vscode "tombonnike.vscode-status-bar-format-toggle"
 vscode "usernamehw.errorlens"
-vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
-vscode "VisualStudioExptTeam.vscodeintellicode"
 vscode "vscode-icons-team.vscode-icons"
-vscode "wholroyd.jinja"
-vscode "william-voyek.vscode-nginx"
-vscode "xrc-inc.jsonnet-formatter"
 vscode "yzane.markdown-pdf"
 vscode "yzhang.markdown-all-in-one"
 vscode "ZainChen.json"
