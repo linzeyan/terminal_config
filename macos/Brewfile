@@ -46,6 +46,14 @@ brew "clang-format"
 brew "readline"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# C library SSHv1/SSHv2 client and server protocols
+brew "libssh"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # JSON, YAML, TOML, XML, and CSV query and modification tool
@@ -66,6 +74,8 @@ brew "dotnet"
 brew "expect"
 # Stack trace visualizer
 brew "flamegraph"
+# Platform built on V8 to build network applications
+brew "node"
 # Terminal JSON viewer
 brew "fx"
 # GNU compiler collection
@@ -82,10 +92,6 @@ brew "gdk-pixbuf"
 brew "git"
 # Render markdown on the CLI
 brew "glow"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
@@ -154,8 +160,6 @@ brew "leptonica"
 brew "libarchive"
 # Portable Foreign Function Interface library
 brew "libffi"
-# C library SSHv1/SSHv2 client and server protocols
-brew "libssh"
 # YAML Parser
 brew "libyaml"
 # Tools for zmodem/xmodem/ymodem file transfer
@@ -192,6 +196,8 @@ brew "pandoc"
 brew "poppler"
 # Tool for visualizing differences between two pdf files
 brew "pdf-diff"
+# Friendly PIL fork (Python Imaging Library)
+brew "pillow"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Tool for creating isolated virtual python environments
@@ -242,6 +248,8 @@ brew "tldr"
 brew "tmux"
 # Anonymizing overlay network for TCP
 brew "tor"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # HTTP load testing tool and library
 brew "vegeta"
 # Command-line client for WebSockets
@@ -272,6 +280,8 @@ cask "altair-graphql-client"
 cask "android-file-transfer", args: { appdir: "/Applications" }
 # Redis desktop manager
 cask "another-redis-desktop-manager"
+# Kubernetes desktop client
+cask "aptakube"
 # Two-factor authentication software
 cask "authy", args: { appdir: "/Applications" }
 # Data management tool that enables working with SQL Server
@@ -286,7 +296,7 @@ cask "cloudflare-warp"
 cask "cyberduck"
 # Universal database tool and SQL client
 cask "dbeaver-community"
-# App for note taking, organizing, task lists, and archiving
+# App for note taking, organising, task lists, and archiving
 cask "evernote", args: { appdir: "/Applications" }
 # Web browser
 cask "firefox", args: { appdir: "/Applications" }
@@ -306,6 +316,8 @@ cask "iterm2", args: { appdir: "/Applications" }
 cask "locationsimulator"
 # Open-source firewall to block unknown outgoing connections
 cask "lulu"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
 # Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
 # Cross-platform MQTT 5.0 Desktop Client
@@ -328,6 +340,8 @@ cask "sequel-ace"
 cask "snipaste", args: { appdir: "/Applications" }
 # Text editor for code, markup and prose
 cask "sublime-text"
+# Messaging app with a focus on speed and security
+cask "telegram"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # Disposable email client
@@ -358,7 +372,7 @@ mas "Xcode", id: 497799835
 vscode "adamhartford.vscode-base64"
 vscode "adpyke.codesnap"
 vscode "ahmadalli.vscode-nginx-conf"
-vscode "Arjun.swagger-viewer"
+vscode "arjun.swagger-viewer"
 vscode "be5invis.toml"
 vscode "bierner.markdown-mermaid"
 vscode "bierner.markdown-preview-github-styles"
@@ -367,18 +381,18 @@ vscode "christian-kohler.path-intellisense"
 vscode "cipchk.zh-hans-tt-hant-vscode"
 vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
-vscode "EditorConfig.EditorConfig"
+vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "ezforo.copy-relative-path-and-line-numbers"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
-vscode "GitHub.copilot"
-vscode "GitHub.copilot-chat"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "golang.go-nightly"
 vscode "googlecloudtools.cloudcode"
-vscode "GraphQL.vscode-graphql"
-vscode "GraphQL.vscode-graphql-syntax"
-vscode "Gruntfuggly.todo-tree"
+vscode "graphql.vscode-graphql"
+vscode "graphql.vscode-graphql-syntax"
+vscode "gruntfuggly.todo-tree"
 vscode "hashicorp.hcl"
 vscode "hashicorp.terraform"
 vscode "hediet.vscode-drawio"
@@ -394,7 +408,7 @@ vscode "mdickin.markdown-shortcuts"
 vscode "mhutchie.git-graph"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-docker"
-vscode "MS-CEINTL.vscode-language-pack-zh-hant"
+vscode "ms-ceintl.vscode-language-pack-zh-hant"
 vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
@@ -407,19 +421,21 @@ vscode "oderwat.indent-rainbow"
 vscode "pbkit.vscode-pbkit"
 vscode "pomdtr.excalidraw-editor"
 vscode "quicktype.quicktype"
-vscode "RandomFractalsInc.vscode-data-preview"
+vscode "randomfractalsinc.vscode-data-preview"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "serayuzgur.crates"
 vscode "shardulm94.trailing-spaces"
 vscode "streetsidesoftware.code-spell-checker"
-vscode "TabNine.tabnine-vscode"
-vscode "Tim-Koehler.helm-intellisense"
+vscode "tabnine.tabnine-vscode"
+vscode "tim-koehler.helm-intellisense"
 vscode "tombonnike.vscode-status-bar-format-toggle"
+vscode "tooltitudeteam.tooltitude"
 vscode "usernamehw.errorlens"
 vscode "vscode-icons-team.vscode-icons"
+vscode "xaver.clang-format"
 vscode "yzane.markdown-pdf"
 vscode "yzhang.markdown-all-in-one"
-vscode "ZainChen.json"
+vscode "zainchen.json"
 vscode "zxh404.vscode-proto3"
