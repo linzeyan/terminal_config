@@ -220,6 +220,8 @@ brew "r"
 brew "rsync"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
+# Tool for shell commands execution, visualization and alerting
+brew "sampler"
 # Fast and accurate code counter with complexity and COCOMO estimates
 brew "scc"
 # Shell Script Compiler
@@ -282,8 +284,6 @@ cask "android-file-transfer", args: { appdir: "/Applications" }
 cask "another-redis-desktop-manager"
 # Kubernetes desktop client
 cask "aptakube"
-# Two-factor authentication software
-cask "authy", args: { appdir: "/Applications" }
 # Data management tool that enables working with SQL Server
 cask "azure-data-studio"
 # CLI for managing the battery charging status
