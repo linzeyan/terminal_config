@@ -280,8 +280,6 @@ cask "adoptopenjdk"
 cask "altair-graphql-client"
 # Transfer files from and to an Android smartphone
 cask "android-file-transfer", args: { appdir: "/Applications" }
-# Redis desktop manager
-cask "another-redis-desktop-manager"
 # Kubernetes desktop client
 cask "aptakube"
 # Data management tool that enables working with SQL Server
@@ -294,8 +292,6 @@ cask "clock-bar"
 cask "cloudflare-warp"
 # Server and cloud storage browser
 cask "cyberduck"
-# Universal database tool and SQL client
-cask "dbeaver-community"
 # App for note taking, organising, task lists, and archiving
 cask "evernote", args: { appdir: "/Applications" }
 # Web browser
@@ -332,14 +328,10 @@ cask "postman"
 cask "proxyman"
 # GUI for streamlined Redis application development
 cask "redisinsight"
-# Data science software focusing on R and Python
-cask "rstudio"
 # MySQL/MariaDB database management
 cask "sequel-ace"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
-# Text editor for code, markup and prose
-cask "sublime-text"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Desktop client for Telegram messenger
@@ -354,8 +346,6 @@ cask "tunnelblick"
 cask "vagrant"
 # Open-source code editor
 cask "visual-studio-code"
-# Multimedia player
-cask "vlc", args: { appdir: "/Applications" }
 # Network protocol analyzer
 cask "wireshark"
 mas "AdBlocker", id: 1018301773
