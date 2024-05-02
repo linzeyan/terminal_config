@@ -59,7 +59,6 @@
     },
     "update.mode": "start",
     "vsicons.dontShowNewVersionMessage": true,
-    "workbench.editor.untitled.hint": "hidden",
     "workbench.iconTheme": "vscode-icons",
     "yaml.customTags": [
         "!encrypted/pkcs1-oaep scalar",
@@ -72,4 +71,5 @@
         "editor.defaultFormatter": "hashicorp.terraform",
         "editor.formatOnSave": true
     },
+    "workbench.editor.empty.hint": "hidden",
 }
