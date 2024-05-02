@@ -70,6 +70,8 @@ brew "dnscontrol"
 brew "docker"
 # .NET Core
 brew "dotnet"
+# More intuitive version of du in rust
+brew "dust"
 # Program that can automate interactive applications
 brew "expect"
 # Stack trace visualizer
