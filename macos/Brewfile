@@ -120,6 +120,8 @@ brew "graphviz"
 brew "protobuf"
 # Next generation open source RPC library and framework
 brew "grpc"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
 # Kubernetes package manager
 brew "helm"
 # HTTP load generator, ApacheBench (ab) replacement
@@ -222,6 +224,8 @@ brew "r"
 brew "rsync"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
+# Rust toolchain installer
+brew "rustup-init"
 # Tool for shell commands execution, visualization and alerting
 brew "sampler"
 # Fast and accurate code counter with complexity and COCOMO estimates
@@ -286,7 +290,7 @@ cask "android-file-transfer", args: { appdir: "/Applications" }
 cask "aptakube"
 # Data management tool that enables working with SQL Server
 cask "azure-data-studio"
-# CLI for managing the battery charging status
+# App for managing battery charging. (Also installs a CLI on first use.)
 cask "battery"
 # Macbook | Clock, right on the touch bar
 cask "clock-bar"
@@ -344,6 +348,8 @@ cask "tempbox"
 cask "the-unarchiver", args: { appdir: "/Applications" }
 # Free and open-source OpenVPN client
 cask "tunnelblick"
+# Collection of tools to build a dedicated basic communication network
+cask "v2rayu"
 # Development environment
 cask "vagrant"
 # Open-source code editor
@@ -375,6 +381,7 @@ vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
+vscode "exiasr.hadolint"
 vscode "ezforo.copy-relative-path-and-line-numbers"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
@@ -420,10 +427,12 @@ vscode "rust-lang.rust-analyzer"
 vscode "serayuzgur.crates"
 vscode "shardulm94.trailing-spaces"
 vscode "streetsidesoftware.code-spell-checker"
+vscode "sumneko.lua"
 vscode "tabnine.tabnine-vscode"
 vscode "tim-koehler.helm-intellisense"
 vscode "tombonnike.vscode-status-bar-format-toggle"
 vscode "tooltitudeteam.tooltitude"
+vscode "trunk.io"
 vscode "usernamehw.errorlens"
 vscode "vscode-icons-team.vscode-icons"
 vscode "xaver.clang-format"
