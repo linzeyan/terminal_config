@@ -48,16 +48,16 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=yellow,bold'
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=magenta,bold'
 ZSH_HIGHLIGHT_STYLES[cursor]='bg=blue'
 # ZSH_HIGHLIGHT_STYLES[line]='bold'
-## pip zsh completion start
-function _pip_completion {
-  local words cword
-  read -Ac words
-  read -cn cword
-  reply=( $( COMP_WORDS="$words[*]" \
-             COMP_CWORD=$(( cword-1 )) \
-             PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
-}
-compctl -K _pip_completion pip3
+# ## pip zsh completion start
+# function _pip_completion {
+#   local words cword
+#   read -Ac words
+#   read -cn cword
+#   reply=( $( COMP_WORDS="$words[*]" \
+#              COMP_CWORD=$(( cword-1 )) \
+#              PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
+# }
+# compctl -K _pip_completion pip3
 ## pip zsh completion end
 ## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -75,4 +75,14 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
-. ${PYTHON_BIN}/aws_zsh_completer.sh
+# . ${PYTHON_BIN}/aws_zsh_completer.sh
+
+[ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
+
+source ~/.cargo/env
+
+# for carapace https://carapace.sh/
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
+zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'

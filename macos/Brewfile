@@ -9,6 +9,7 @@ tap "homebrew/services"
 tap "kubefirst/tools"
 tap "linzeyan/tools"
 tap "rs/tap"
+tap "rsteube/tap"
 # Run your GitHub Actions locally
 brew "act"
 # Simple, modern, secure file encryption
@@ -285,6 +286,8 @@ brew "linzeyan/tools/ops-cli"
 brew "rs/tap/jaggr"
 # iTerm2 expvar/JSON monitoring tool
 brew "rs/tap/jplot"
+# multi-shell multi-command argument completer
+brew "rsteube/tap/carapace"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # GraphQL client
@@ -307,7 +310,6 @@ cask "cyberduck"
 cask "evernote", args: { appdir: "/Applications" }
 # Web browser
 cask "firefox", args: { appdir: "/Applications" }
-# Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
 # Web browser
 cask "google-chrome", args: { appdir: "/Applications" }
@@ -407,6 +409,7 @@ vscode "jinliming2.vscode-go-template"
 vscode "kejun.devtoys"
 vscode "kisstkondoros.vscode-gutter-preview"
 vscode "llvm-vs-code-extensions.vscode-clangd"
+vscode "lunuan.kubernetes-templates"
 vscode "matt-meyers.vscode-dbml"
 vscode "mdickin.markdown-shortcuts"
 vscode "mhutchie.git-graph"
