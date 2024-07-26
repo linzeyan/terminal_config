@@ -44,8 +44,6 @@ brew "glib"
 brew "chruby"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
-# Library for command-line editing
-brew "readline"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # Validating, recursive, caching DNS resolver
@@ -64,6 +62,12 @@ brew "dasel"
 brew "datree"
 # Perform a dhcp-request to check whether a dhcp-server is running
 brew "dhcping"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Visually compare two PDF files
+brew "diff-pdf"
 # Tool for exploring each layer in a docker image
 brew "dive"
 # Synchronize your DNS to multiple providers from a simple DSL
@@ -96,8 +100,6 @@ brew "gdk-pixbuf"
 brew "git"
 # Render markdown on the CLI
 brew "glow"
-# GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Generate introspection data for GObject libraries
@@ -200,8 +202,6 @@ brew "openjdk"
 brew "opentofu"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
-# PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler"
 # Tool for visualizing differences between two pdf files
 brew "pdf-diff"
 # Friendly PIL fork (Python Imaging Library)
@@ -229,7 +229,7 @@ brew "rsync"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
 # Rust toolchain installer
-brew "rustup-init"
+brew "rustup"
 # Tool for shell commands execution, visualization and alerting
 brew "sampler"
 # Fast and accurate code counter with complexity and COCOMO estimates
@@ -331,6 +331,8 @@ cask "microsoft-auto-update"
 cask "mongodb-compass"
 # Cross-platform MQTT 5.0 Desktop Client
 cask "mqttx"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Replacement for Docker Desktop
 cask "orbstack"
 # Tool to create and manage Outline servers, powered by Shadowsocks
@@ -384,14 +386,17 @@ vscode "bierner.markdown-preview-github-styles"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "christian-kohler.path-intellisense"
 vscode "cipchk.zh-hans-tt-hant-vscode"
+vscode "danielsanmedium.dscodegpt"
 vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "exiasr.hadolint"
 vscode "ezforo.copy-relative-path-and-line-numbers"
+vscode "fill-labs.dependi"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
+vscode "genieai.chatgpt-vscode"
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "golang.go-nightly"
@@ -433,11 +438,11 @@ vscode "randomfractalsinc.vscode-data-preview"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
-vscode "serayuzgur.crates"
 vscode "shardulm94.trailing-spaces"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "sumneko.lua"
 vscode "tabnine.tabnine-vscode"
+vscode "tamasfe.even-better-toml"
 vscode "tim-koehler.helm-intellisense"
 vscode "tombonnike.vscode-status-bar-format-toggle"
 vscode "tooltitudeteam.tooltitude"
