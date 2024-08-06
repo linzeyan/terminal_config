@@ -212,6 +212,8 @@ brew "pinentry-mac"
 brew "virtualenv"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Coreutils progress viewer
+brew "progress"
 # Go support for Google's protocol buffers
 brew "protoc-gen-go"
 # Protoc plugin that generates code for gRPC-Go clients
@@ -321,6 +323,8 @@ cask "input-source-pro"
 cask "insomnia"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2", args: { appdir: "/Applications" }
+# Project management software
+cask "lark"
 # Application to spoof your iOS, iPadOS or iPhoneSimulator device location
 cask "locationsimulator"
 # Open-source firewall to block unknown outgoing connections
@@ -432,6 +436,7 @@ vscode "mushan.vscode-paste-image"
 vscode "nhoizey.gremlins"
 vscode "oderwat.indent-rainbow"
 vscode "pbkit.vscode-pbkit"
+vscode "pkief.material-icon-theme"
 vscode "pomdtr.excalidraw-editor"
 vscode "quicktype.quicktype"
 vscode "randomfractalsinc.vscode-data-preview"
