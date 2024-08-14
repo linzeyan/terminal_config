@@ -212,8 +212,6 @@ brew "pinentry-mac"
 brew "virtualenv"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
-# Coreutils progress viewer
-brew "progress"
 # Go support for Google's protocol buffers
 brew "protoc-gen-go"
 # Protoc plugin that generates code for gRPC-Go clients
@@ -365,6 +363,8 @@ cask "tunnelblick"
 cask "v2rayu"
 # Development environment
 cask "vagrant"
+# RSS and Atom reader
+cask "vienna"
 # Open-source code editor
 cask "visual-studio-code"
 # Network protocol analyzer
@@ -404,7 +404,6 @@ vscode "genieai.chatgpt-vscode"
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "golang.go-nightly"
-vscode "googlecloudtools.cloudcode"
 vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-syntax"
 vscode "gruntfuggly.todo-tree"
