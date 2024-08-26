@@ -24,6 +24,8 @@ brew "aom"
 brew "argocd"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Terminal bandwidth utilization tool
+brew "bandwhich"
 # Utility to encode and decode base91 files
 brew "base91"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -333,6 +335,8 @@ cask "microsoft-auto-update"
 cask "mongodb-compass"
 # Cross-platform MQTT 5.0 Desktop Client
 cask "mqttx"
+# Free and open-source RSS reader
+cask "netnewswire"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Replacement for Docker Desktop
@@ -363,8 +367,6 @@ cask "tunnelblick"
 cask "v2rayu"
 # Development environment
 cask "vagrant"
-# RSS and Atom reader
-cask "vienna"
 # Open-source code editor
 cask "visual-studio-code"
 # Network protocol analyzer
