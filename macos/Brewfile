@@ -166,12 +166,12 @@ brew "kubecm"
 brew "kubeconform"
 # Image processing and image analysis library
 brew "leptonica"
-# Multi-format archive and compression library
-brew "libarchive"
 # Portable Foreign Function Interface library
 brew "libffi"
 # YAML Parser
 brew "libyaml"
+# Curses-based tool for viewing and analyzing log files
+brew "lnav"
 # Tools for zmodem/xmodem/ymodem file transfer
 brew "lrzsz"
 # Fast, async, resource-friendly link checker
@@ -405,7 +405,7 @@ vscode "foxundermoon.shell-format"
 vscode "genieai.chatgpt-vscode"
 vscode "github.copilot"
 vscode "github.copilot-chat"
-vscode "golang.go-nightly"
+vscode "golang.go"
 vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-syntax"
 vscode "gruntfuggly.todo-tree"
