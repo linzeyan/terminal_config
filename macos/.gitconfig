@@ -9,6 +9,29 @@
 	precomposeunicode = true
 	safecrlf = true
 	excludesfile = /Users/ricky/.gitignore
+	pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+	# https://dandavison.github.io/delta/introduction.html
+    navigate = true    # use n and N to move between diff sections
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    dark = true
+    # light = true
+	true-color = always
+
+	side-by-side = true
+	line-numbers = true
+
+	hyperlinks = true
+	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+    # hyperlinks-file-link-format = "idea://open?file={path}&line={line}"
+    # hyperlinks-file-link-format = "pycharm://open?file={path}&line={line}"
+
+[merge]
+    conflictstyle = zdiff3
+
 [pull]
     ff = only
 [diff]

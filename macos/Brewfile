@@ -1,5 +1,6 @@
 tap "buo/cask-upgrade"
 tap "cloudflare/cloudflare"
+tap "dart-lang/dart"
 tap "derailed/k9s"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
@@ -38,6 +39,8 @@ brew "openssl@3"
 brew "bat"
 # Parser generator
 brew "bison"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
 # Core application library for C
@@ -100,6 +103,10 @@ brew "gdbm"
 brew "gdk-pixbuf"
 # Distributed revision control system
 brew "git"
+# Highly customizable changelog generator
+brew "git-cliff"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # Render markdown on the CLI
 brew "glow"
 # Open source programming language to build simple/reliable/efficient software
@@ -308,6 +315,8 @@ cask "clock-bar"
 cask "cloudflare-warp"
 # Server and cloud storage browser
 cask "cyberduck"
+# Virtual monitor for screen sharing
+cask "deskpad"
 # App for note taking, organising, task lists, and archiving
 cask "evernote", args: { appdir: "/Applications" }
 # Web browser
@@ -323,6 +332,8 @@ cask "input-source-pro"
 cask "insomnia"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2", args: { appdir: "/Applications" }
+# Tool to show what is persistently installed on the computer
+cask "knockknock"
 # Project management software
 cask "lark"
 # Application to spoof your iOS, iPadOS or iPhoneSimulator device location
@@ -385,6 +396,7 @@ mas "Xcode", id: 497799835
 vscode "adamhartford.vscode-base64"
 vscode "adpyke.codesnap"
 vscode "ahmadalli.vscode-nginx-conf"
+vscode "andrewbutson.vscode-openai"
 vscode "arjun.swagger-viewer"
 vscode "be5invis.toml"
 vscode "bierner.markdown-mermaid"
@@ -392,7 +404,10 @@ vscode "bierner.markdown-preview-github-styles"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "christian-kohler.path-intellisense"
 vscode "cipchk.zh-hans-tt-hant-vscode"
+vscode "continue.continue"
 vscode "danielsanmedium.dscodegpt"
+vscode "dart-code.dart-code"
+vscode "dart-code.flutter"
 vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
@@ -420,6 +435,7 @@ vscode "kejun.devtoys"
 vscode "kisstkondoros.vscode-gutter-preview"
 vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "lunuan.kubernetes-templates"
+vscode "marscode.marscode-extension"
 vscode "matt-meyers.vscode-dbml"
 vscode "mdickin.markdown-shortcuts"
 vscode "mechatroner.rainbow-csv"
