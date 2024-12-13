@@ -235,8 +235,8 @@ brew "pup"
 brew "python@3.9"
 # Software environment for statistical computing
 brew "r"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
+# Wrapper around ripgrep that adds multiple rich file types
+brew "ripgrep-all"
 # Utility that provides fast incremental file transfer
 brew "rsync"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
