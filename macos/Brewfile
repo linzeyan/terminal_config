@@ -7,6 +7,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
+tap "konstructio/taps"
 tap "kubefirst/tools"
 tap "linzeyan/tools"
 tap "rs/tap"
@@ -197,6 +198,8 @@ brew "mercurial"
 brew "miller"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
+# CLI tool for saving complete web pages as a single HTML file
+brew "monolith"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Port scanning utility for large networks
@@ -293,7 +296,7 @@ brew "zsh"
 brew "cloudflare/cloudflare/cf-terraforming"
 # Terraform
 brew "hashicorp/tap/terraform"
-brew "kubefirst/tools/kubefirst"
+brew "konstructio/taps/kubefirst"
 brew "linzeyan/tools/ops-cli"
 # JSON Aggregation CLI
 brew "rs/tap/jaggr"
@@ -303,8 +306,6 @@ brew "rs/tap/jplot"
 brew "rsteube/tap/carapace"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
-# GraphQL client
-cask "altair-graphql-client"
 # Transfer files from and to an Android smartphone
 cask "android-file-transfer", args: { appdir: "/Applications" }
 # Kubernetes desktop client
@@ -362,8 +363,6 @@ cask "outline-manager"
 cask "postman"
 # HTTP debugging proxy
 cask "proxyman"
-# GUI for streamlined Redis application development
-cask "redisinsight"
 # MySQL/MariaDB database management
 cask "sequel-ace"
 # Snip or pin screenshots
@@ -384,6 +383,8 @@ cask "v2rayu"
 cask "vagrant"
 # Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
 # Network protocol analyzer
 cask "wireshark"
 mas "AdBlocker", id: 1018301773
@@ -470,6 +471,7 @@ vscode "tamasfe.even-better-toml"
 vscode "tim-koehler.helm-intellisense"
 vscode "tombonnike.vscode-status-bar-format-toggle"
 vscode "tooltitudeteam.tooltitude"
+vscode "tooltitudeteam.tooltitude-pb"
 vscode "usernamehw.errorlens"
 vscode "vadimcn.vscode-lldb"
 vscode "vscode-icons-team.vscode-icons"
