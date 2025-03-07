@@ -1,3 +1,12 @@
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[column]
+    ui = auto
+[color]
+	status = always
+	ui = true
 [core]
 	repositoryformatversion = 0
 	filemode = true
@@ -8,8 +17,10 @@
 	ignorecase = false
 	precomposeunicode = true
 	safecrlf = true
-	excludesfile = /Users/ricky/.gitignore
+	excludesfile = ~/.gitignore
 	pager = delta
+	# fsmonitor = true
+	# untrackedCache = true
 
 [interactive]
     diffFilter = delta --color-only
@@ -31,14 +42,31 @@
 
 [merge]
     conflictstyle = zdiff3
-
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[fetch]
+	prune = true
+	pruneTags = true
+    all = true
 [pull]
     ff = only
+	# rebase = true
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
 [diff]
 	algorithm = patience
-[color]
-	status = always
-	ui = true
+	# algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 #  project-summary = !which onefetch && onefetch
@@ -48,14 +76,14 @@
 	signingkey = 2A4313489FDCA802ED6FCC214B03D879EA73DF37
 [commit]
 	gpgsign = true
+    # verbose = true
 [remote "origin"]
 	fetch = +refs/heads/*:refs/remotes/origin/*
 	push = +refs/tags/*
 	push = +refs/heads/*
-[fetch]
-	prune = true
+
 [help]
-	autocorrect = 1
+	autocorrect = prompt
 #[include]
 #	path = .gitconfig
 #[credential]
