@@ -9,8 +9,10 @@ config.check_for_updates = false
 config.warn_about_missing_glyphs = false
 
 -- How many lines of scrollback you want to retain per tab
-config.scrollback_lines = 3500
+config.scrollback_lines = 100000
+config.max_fps = 120
 config.enable_scroll_bar = true
+config.window_decorations = "INTEGRATED_BUTTONS"
 -- changing the initial geometry for new windows:
 config.initial_cols = 180
 config.initial_rows = 60
@@ -47,26 +49,26 @@ config.colors = {
 --     saturation = 1.0
 -- }
 -- 視窗背景不透明度 0.0 （表示完全半透明/透明）到 1.0 （表示完全不透明）
-config.window_background_opacity = 0.95
+-- config.window_background_opacity = 0.95
 -- 文本背景不透明度 0.0 （完全半透明）到 1.0 （完全不透明）
 -- config.text_background_opacity = 0.1
 
 -- ======= Key Binding =======
 config.keys = {
-    {
+    { -- ⌘k
         key = 'k',
         mods = 'CMD',
         action = wezterm.action.ClearScrollback 'ScrollbackAndViewport'
-    }, {
+    }, { -- ⌘d
         key = 'd',
         mods = 'CMD',
         action = wezterm.action.SplitHorizontal {domain = 'CurrentPaneDomain'}
-    }, {
+    }, { -- ⌘⇧d
         key = 'd',
         mods = 'CMD|SHIFT',
         action = wezterm.action.SplitVertical {domain = 'CurrentPaneDomain'}
-    },
-
+    }
 }
+
 -- Finally, return the configuration to wezterm:
 return config
