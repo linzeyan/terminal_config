@@ -104,12 +104,21 @@ environmentSetting() {
   defaults write NSGlobalDomain AppleICUForce24HourTime -bool true
   # 自動切換至文件的輸入方式
   defaults write com.apple.HIToolbox AppleInputSourceHistory -bool true
-  # 預設網頁瀏覽器 改為 google chrome
-  defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
+  # 預設網頁瀏覽器改為 Google Chrome
+  defaults write ~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure.plist LSHandlers -array-add \
     '{ LSHandlerContentType = "public.html"; LSHandlerRoleAll = "com.google.Chrome"; }'
 
-  defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
+  defaults write ~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure.plist LSHandlers -array-add \
     '{ LSHandlerContentType = "public.url"; LSHandlerRoleAll = "com.google.Chrome"; }'
+
+  defaults write ~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure.plist LSHandlers -array-add \
+    '{ LSHandlerURLScheme = "http"; LSHandlerRoleAll = "com.google.Chrome"; }'
+
+  defaults write ~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure.plist LSHandlers -array-add \
+    '{ LSHandlerURLScheme = "https"; LSHandlerRoleAll = "com.google.Chrome"; }'
+
+  # 重建 Launch Services 資料庫
+  /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
   # 登出
   osascript -e 'tell application "System Events" to log out'
 }
