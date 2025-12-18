@@ -122,7 +122,8 @@ zshZim() {
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zim/modules/powerlevel10k
   fi
   msg "Install PowerLevel10k"
-  . $HOME/.zim/zimfw.zsh install
+  export ZIM_HOME="$HOME/.zim"
+  zsh $HOME/.zim/zimfw.zsh install
   ln -sf ${dirName}/.p10k.zsh ~/.p10k.zsh
 }
 

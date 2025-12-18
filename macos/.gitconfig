@@ -51,7 +51,7 @@
 	autoupdate = true
 [fetch]
 	prune = true
-	pruneTags = true
+	# pruneTags = true
     all = true
 [pull]
     ff = only
