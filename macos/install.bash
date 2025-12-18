@@ -49,7 +49,7 @@ installHomeBrew() {
 installPackages() {
   installHomeBrew
 
-  if [[ ! d "$HOME/terminal_config" ]]; then
+  if [[ ! -d "$HOME/terminal_config" ]]; then
     msg "Clone Config Repo"
     cd $HOME && git clone ${repoUri}
   fi
