@@ -5,7 +5,7 @@ set -ex
 GREEN='\033[0;32m'
 RESET='\033[0m'
 repoUri='https://github.com/linzeyan/terminal_config.git'
-dirName="$HOME/terminal_config/macos"
+dirName="$HOME/git/terminal_config/macos"
 
 msg() {
   echo "${GREEN}${1}${RESET}"
@@ -49,9 +49,10 @@ installHomeBrew() {
 installPackages() {
   installHomeBrew
 
-  if [[ ! -d "$HOME/terminal_config" ]]; then
+  mkdir -p $HOME/git
+  if [[ ! -d "$HOME/git/terminal_config" ]]; then
     msg "Clone Config Repo"
-    cd $HOME && git clone ${repoUri}
+    cd $HOME/git && git clone ${repoUri}
   fi
 
   msg "Restore brew"
@@ -80,34 +81,34 @@ zshOMZ() {
 
 otherConfigs() {
   msg "Configure git global config"
-  cp -f ${dirName}/.gitconfig ~
+  ln -s ${dirName}/.gitconfig ~/.gitconfig
   msg "Generate .zshrc"
-  cp -f ${dirName}/.zshrc ~/.zshrc
+  ln -s ${dirName}/.zshrc ~/.zshrc
   msg "Generate .vimrc"
-  cp -f ${dirName}/.vimrc ~/.vimrc
+  ln -s ${dirName}/.vimrc ~/.vimrc
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   # git clone https://github.com/chr4/nginx.vim ~/.vim/bundle/nginx.vim
   msg "Install Vim Plugin"
   vim -c 'BundleInstall' -c 'q' -c 'q'
   msg "Copy configs"
-  cp -f ${dirName}/.tmux.conf ~
-  cp -fr ${dirName}/.ssh ~
-  cp -f ${dirName}/curltime ~
-  cp -fr ${dirName}/.snipaste ~
+  ln -s ${dirName}/.tmux.conf ~/.tmux.conf
+  ln -s ${dirName}/.ssh ~/.ssh
+  ln -s ${dirName}/curltime ~/curltime
+  ln -s ${dirName}/.snipaste ~/.snipaste
   msg "Copy lrzsz scripts"
-  sudo cp -f ${dirName}/iterm2-zmodem/iterm2-* /usr/local/bin
+  chmod +x ${dirName}/iterm2-zmodem/iterm2-*
+  sudo ln -s ${dirName}/iterm2-zmodem/iterm2-* /usr/local/bin/
   sudo xcodebuild -license accept
 }
 
 zshZim() {
   msg "Install zim"
   curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
-  cp -f ${dirName}/.zimrc ~/.zimrc
-  echo "zmodule romkatv/powerlevel10k" >> ~/.zimrc
+  ln -s ${dirName}/.zimrc ~/.zimrc
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zim/modules/powerlevel10k
   msg "Install PowerLevel10k"
   zimfw install
-  cp -f ${dirName}/.p10k.zsh ~
+  ln -s ${dirName}/.p10k.zsh ~/.p10k.zsh
 }
 
 environmentSetting() {
@@ -152,6 +153,12 @@ environmentSetting() {
   # 登出
   osascript -e 'tell application "System Events" to log out'
 }
+cleanup() {
+  msg "cleanup"
+  rm -f $HOME/install.bash
+}
+
+trap cleanup EXIT
 
 installPackages
 zshZim
