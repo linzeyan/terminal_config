@@ -110,7 +110,7 @@ otherConfigs() {
 }
 
 zshZim() {
-  if [[ ! -d "$HOME/.zim/zimfw.zsh" ]]; then
+  if [[ ! -f "$HOME/.zim/zimfw.zsh" ]]; then
     msg "Install zim"
     curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
   fi
