@@ -89,23 +89,23 @@ zshOMZ() {
 
 otherConfigs() {
   msg "Configure git global config"
-  ln -s ${dirName}/.gitconfig ~/.gitconfig
+  ln -sf ${dirName}/.gitconfig ~/.gitconfig
   msg "Generate .zshrc"
-  ln -s ${dirName}/.zshrc ~/.zshrc
+  ln -sf ${dirName}/.zshrc ~/.zshrc
   msg "Generate .vimrc"
-  ln -s ${dirName}/.vimrc ~/.vimrc
+  ln -sf ${dirName}/.vimrc ~/.vimrc
   git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   # git clone --depth=1 https://github.com/chr4/nginx.vim ~/.vim/bundle/nginx.vim
   msg "Install Vim Plugin"
   vim -c 'BundleInstall' -c 'q' -c 'q'
   msg "Copy configs"
-  ln -s ${dirName}/.tmux.conf ~/.tmux.conf
-  ln -s ${dirName}/.ssh ~/.ssh
-  ln -s ${dirName}/curltime ~/curltime
-  ln -s ${dirName}/.snipaste ~/.snipaste
+  ln -sf ${dirName}/.tmux.conf ~/.tmux.conf
+  ln -sf ${dirName}/.ssh ~/.ssh
+  ln -sf ${dirName}/curltime ~/curltime
+  ln -sf ${dirName}/.snipaste ~/.snipaste
   msg "Copy lrzsz scripts"
   chmod +x ${dirName}/iterm2-zmodem/iterm2-*
-  sudo ln -s ${dirName}/iterm2-zmodem/iterm2-* /usr/local/bin/
+  sudo ln -sf ${dirName}/iterm2-zmodem/iterm2-* /usr/local/bin/
   sudo xcodebuild -license accept
 }
 
@@ -115,7 +115,7 @@ zshZim() {
     curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
   fi
 
-  ln -s ${dirName}/.zimrc ~/.zimrc
+  ln -sf ${dirName}/.zimrc ~/.zimrc
 
   if [[ ! -d "$HOME/.zim/modules/powerlevel10k" ]]; then
     msg "Clone PowerLevel10k"
@@ -123,7 +123,7 @@ zshZim() {
   fi
   msg "Install PowerLevel10k"
   . $HOME/.zim/zimfw.zsh install
-  ln -s ${dirName}/.p10k.zsh ~/.p10k.zsh
+  ln -sf ${dirName}/.p10k.zsh ~/.p10k.zsh
 }
 
 environmentSetting() {
