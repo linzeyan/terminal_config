@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 
 set -e
+scriptName="$HOME/.__install.bash"
 
-if [ ! -f $HOME/install.bash ]; then
-  echo "Downloading install.bash script..."
-  curl -sSfL https://raw.githubusercontent.com/linzeyan/terminal_config/master/macos/install.bash -o $HOME/install.bash
-fi
+cleanup() {
+  msg "cleanup $scriptName"
+  rm -f $scriptName
+}
 
-bash $HOME/install.bash
+trap cleanup EXIT INT TERM
+
+rm -f $scriptName
+
+echo "Downloading install.bash"
+curl -sSfL https://raw.githubusercontent.com/linzeyan/terminal_config/master/macos/install.bash -o $scriptName
+
+echo "Execute install.bash"
+bash $scriptName

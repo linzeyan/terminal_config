@@ -153,12 +153,6 @@ environmentSetting() {
   # 登出
   osascript -e 'tell application "System Events" to log out'
 }
-cleanup() {
-  msg "cleanup"
-  rm -f $HOME/install.bash
-}
-
-trap cleanup EXIT
 
 installPackages
 zshZim
