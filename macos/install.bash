@@ -59,7 +59,6 @@ installPackages() {
   brew bundle --file="${dirName}/Brewfile"
 
   msg "Install Fira-code"
-  brew tap homebrew/cask-fonts
   brew install font-fira-code-nerd-font
 
   # msg "GPG"
@@ -70,13 +69,22 @@ installPackages() {
 }
 
 zshOMZ() {
-  msg "Clone Oh-My-Zsh"
-  git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
-
-  msg "Clone git-radar"
-  git clone https://github.com/linzeyan/git-radar.git ~/.git-radar
+  if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+    msg "Clone Oh-My-Zsh"
+    git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+  fi
+  if [[ ! -d "${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]]; then
+    msg "Install zsh plugins == > zsh-autosuggestions"
+    git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  fi
+  if [[ ! -d "${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]]; then
+    msg "Install zsh plugins == > zsh-syntax-highlighting"
+    git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  fi
+  if [[ ! -d "$HOME/.git-radar" ]]; then
+    msg "Clone git-radar"
+    git clone --depth=1 https://github.com/linzeyan/git-radar.git ~/.git-radar
+  fi
 }
 
 otherConfigs() {
@@ -86,8 +94,8 @@ otherConfigs() {
   ln -s ${dirName}/.zshrc ~/.zshrc
   msg "Generate .vimrc"
   ln -s ${dirName}/.vimrc ~/.vimrc
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  # git clone https://github.com/chr4/nginx.vim ~/.vim/bundle/nginx.vim
+  git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  # git clone --depth=1 https://github.com/chr4/nginx.vim ~/.vim/bundle/nginx.vim
   msg "Install Vim Plugin"
   vim -c 'BundleInstall' -c 'q' -c 'q'
   msg "Copy configs"
@@ -102,12 +110,19 @@ otherConfigs() {
 }
 
 zshZim() {
-  msg "Install zim"
-  curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+  if [[ ! -d "$HOME/.zim/zimfw.zsh" ]]; then
+    msg "Install zim"
+    curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+  fi
+
   ln -s ${dirName}/.zimrc ~/.zimrc
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zim/modules/powerlevel10k
+
+  if [[ ! -d "$HOME/.zim/modules/powerlevel10k" ]]; then
+    msg "Clone PowerLevel10k"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zim/modules/powerlevel10k
+  fi
   msg "Install PowerLevel10k"
-  zimfw install
+  . $HOME/.zim/zimfw.zsh install
   ln -s ${dirName}/.p10k.zsh ~/.p10k.zsh
 }
 
