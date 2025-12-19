@@ -173,4 +173,4 @@ environmentSetting() {
 installPackages
 zshZim
 otherConfigs
-environmentSetting
+# environmentSetting
