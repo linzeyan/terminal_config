@@ -1,12 +1,7 @@
 tap "buo/cask-upgrade"
 tap "cloudflare/cloudflare"
-tap "dart-lang/dart"
 tap "derailed/k9s"
 tap "hashicorp/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/services"
 tap "konstructio/taps"
 tap "kubefirst/tools"
 tap "linzeyan/tools"
@@ -22,8 +17,6 @@ brew "xz"
 brew "jpeg-xl"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
-# GitOps Continuous Delivery for Kubernetes
-brew "argocd"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Terminal bandwidth utilization tool
@@ -64,8 +57,6 @@ brew "colima"
 brew "curl"
 # JSON, YAML, TOML, XML, and CSV query and modification tool
 brew "dasel"
-# CLI tool to run policies against Kubernetes manifests YAML files or Helm charts
-brew "datree"
 # Perform a dhcp-request to check whether a dhcp-server is running
 brew "dhcping"
 # GNU Pretty Good Privacy (PGP) package
@@ -80,8 +71,6 @@ brew "dive"
 brew "dnscontrol"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
-# .NET Core
-brew "dotnet"
 # More intuitive version of du in rust
 brew "dust"
 # Program that can automate interactive applications
@@ -90,8 +79,6 @@ brew "expect"
 brew "fd"
 # Stack trace visualizer
 brew "flamegraph"
-# Platform built on V8 to build network applications
-brew "node"
 # Terminal JSON viewer
 brew "fx"
 # GNU compiler collection
@@ -120,8 +107,6 @@ brew "gobject-introspection"
 brew "golangci-lint"
 # Deliver Go binaries as fast and easily as possible
 brew "goreleaser"
-# Terminal based graphical activity monitor inspired by gtop and vtop
-brew "gotop"
 # Image manipulation
 brew "netpbm"
 # OpenType text shaping engine
@@ -132,14 +117,8 @@ brew "pango"
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
-# Next generation open source RPC library and framework
-brew "grpc"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
-# Kubernetes package manager
-brew "helm"
 # HTTP load generator, ApacheBench (ab) replacement
 brew "hey"
 # Improved top (interactive process viewer)
@@ -156,26 +135,10 @@ brew "iproute2mac"
 brew "jenv"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Little helper to run CNCF's k3s in Docker
-brew "k3d"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
-# Kubernetes CLI To Manage Your Clusters In Style!
-brew "k9s"
 # Command-line tool to kill processes listening on a specific port
 brew "killport"
-# Run local Kubernetes cluster in Docker
-brew "kind"
-# Tool to move from `docker-compose` to Kubernetes
-brew "kompose"
-# CLI tool to discover unused Kubernetes resources
-brew "kor"
-# Static analysis tool for Kubernetes YAML files and Helm charts
-brew "kube-linter"
-# KubeConfig Manager
-brew "kubecm"
-# FAST Kubernetes manifests validator, with support for Custom Resources!
-brew "kubeconform"
 # Image processing and image analysis library
 brew "leptonica"
 # Portable Foreign Function Interface library
@@ -224,16 +187,8 @@ brew "pdf-diff"
 brew "pillow"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
-# Tool for creating isolated virtual python environments
-brew "virtualenv"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
-# Go support for Google's protocol buffers
-brew "protoc-gen-go"
-# Protoc plugin that generates code for gRPC-Go clients
-brew "protoc-gen-go-grpc"
-# Cloud native development platform
-brew "pulumi"
 # Parse HTML at the command-line
 brew "pup"
 # Interpreted, interactive, object-oriented programming language
@@ -270,8 +225,6 @@ brew "tailscale"
 brew "tcptraceroute"
 # OCR (Optical Character Recognition) engine
 brew "tesseract"
-# Free software distribution for the TeX typesetting system
-brew "texlive"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
@@ -294,11 +247,8 @@ brew "wrk"
 brew "yq"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Utility to export your existing Cloudflare resources as Terraform resources
-brew "cloudflare/cloudflare/cf-terraforming"
 # Terraform
 brew "hashicorp/tap/terraform"
-brew "konstructio/taps/kubefirst"
 brew "linzeyan/tools/ops-cli"
 # JSON Aggregation CLI
 brew "rs/tap/jaggr"
@@ -306,18 +256,8 @@ brew "rs/tap/jaggr"
 brew "rs/tap/jplot"
 # A multi-shell completion binary
 brew "rsteube/tap/carapace"
-# JDK from the Java User Group (JUG)
-cask "adoptopenjdk"
-# Transfer files from and to an Android smartphone
-cask "android-file-transfer", args: { appdir: "/Applications" }
-# Kubernetes desktop client
-cask "aptakube"
-# Data management tool that enables working with SQL Server
-cask "azure-data-studio"
 # App for managing battery charging. (Also installs a CLI on first use.)
 cask "battery"
-# Macbook | Clock, right on the touch bar
-cask "clock-bar"
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
 # Server and cloud storage browser
@@ -329,8 +269,6 @@ cask "evernote", args: { appdir: "/Applications" }
 # Web browser
 cask "firefox", args: { appdir: "/Applications" }
 cask "font-fira-code-nerd-font"
-# Set of tools to manage resources and applications hosted on Google Cloud
-cask "gcloud-cli"
 # Web browser
 cask "google-chrome", args: { appdir: "/Applications" }
 # Tool for multi-language users
@@ -339,24 +277,16 @@ cask "input-source-pro"
 cask "iterm2", args: { appdir: "/Applications" }
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
-# Project management software
-cask "lark"
 # Application to spoof your iOS, iPadOS or iPhoneSimulator device location
 cask "locationsimulator"
 # Open-source firewall to block unknown outgoing connections
 cask "lulu"
-# Provides updates to various Microsoft products
-cask "microsoft-auto-update"
 # Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
 # Free and open-source RSS reader
 cask "netnewswire"
-# App to write, plan, collaborate, and get organised
-cask "notion"
 # Replacement for Docker Desktop
 cask "orbstack"
-# Tool to create and manage Outline servers, powered by Shadowsocks
-cask "outline-manager"
 # Collaboration platform for API development
 cask "postman"
 # HTTP debugging proxy
@@ -365,8 +295,6 @@ cask "proxyman"
 cask "sequel-ace"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
-# Messaging app with a focus on speed and security
-cask "telegram"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # Disposable email client
@@ -375,8 +303,6 @@ cask "tempbox"
 cask "the-unarchiver", args: { appdir: "/Applications" }
 # Free and open-source OpenVPN client
 cask "tunnelblick"
-# Collection of tools to build a dedicated basic communication network
-cask "v2rayu"
 # Development environment
 cask "vagrant"
 # Open-source code editor
@@ -387,14 +313,7 @@ cask "vlc"
 cask "wireshark-app"
 mas "AdBlocker", id: 1018301773
 mas "Amphetamine", id: 937984704
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "Numbers", id: 409203825
-mas "Outline", id: 1356178125
-mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
 vscode "adpyke.codesnap"
 vscode "ahmadalli.vscode-nginx-conf"
@@ -468,43 +387,15 @@ vscode "vscode-icons-team.vscode-icons"
 vscode "yzane.markdown-pdf"
 vscode "yzhang.markdown-all-in-one"
 vscode "zainchen.json"
-go "github.com/icio/actiongraph"
-go "github.com/prometheus/alertmanager/cmd/amtool"
 go "golang.org/x/perf/cmd/benchstat"
 go "github.com/mrtazz/checkmake/cmd/checkmake"
 go "golang.org/x/tools/cmd/deadcode"
 go "github.com/go-delve/delve/cmd/dlv"
-go "entgo.io/ent/cmd/ent"
-go "go.etcd.io/etcd/server/v3"
-go "go.etcd.io/etcd/etcdctl/v3"
-go "go.etcd.io/etcd/etcdutl/v3"
-go "github.com/davidrjenni/reftools/cmd/fillstruct"
-go "github.com/Done-0/fuck-u-code/cmd/fuck-u-code"
 go "gorm.io/gen/tools/gentool"
-go "github.com/jschwinger233/go-spy"
 go "golang.org/x/mobile/cmd/gobind"
-go "github.com/mdempsky/gocode"
-go "mvdan.cc/gofumpt"
 go "github.com/golangci/golangci-lint/cmd/golangci-lint"
-go "golang.org/x/mobile/cmd/gomobile"
 go "github.com/fatih/gomodifytags"
-go "github.com/haya14busa/goplay/cmd/goplay"
 go "golang.org/x/tools/gopls"
-go "github.com/cweill/gotests/gotests"
 go "golang.org/x/vuln/cmd/govulncheck"
-go "gitlab.newfuturetv.com/Ricky/ast"
-go "github.com/fullstorydev/grpcurl/cmd/grpcurl"
 go "github.com/josharian/impl"
-go "github.com/google/ko"
-go "github.com/go-kratos/kratos/cmd/kratos/v2"
-go "github.com/nomad-software/meme"
-go "github.com/golang-migrate/migrate/v4/cmd/migrate"
-go "github.com/prometheus/promu"
-go "google.golang.org/protobuf/cmd/protoc-gen-go"
-go "github.com/go-kratos/kratos/cmd/protoc-gen-go-errors/v2"
-go "google.golang.org/grpc/cmd/protoc-gen-go-grpc"
-go "github.com/go-kratos/kratos/cmd/protoc-gen-go-http/v2"
-go "github.com/google/gnostic/cmd/protoc-gen-openapi"
 go "github.com/orijtech/structslop/cmd/structslop"
-go "github.com/swaggo/swag/cmd/swag"
-go "github.com/google/wire/cmd/wire"
