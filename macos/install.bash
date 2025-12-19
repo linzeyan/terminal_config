@@ -15,7 +15,7 @@ installHomeBrew() {
   msg "Check homebrew is installed or not."
   if ! which brew &> /dev/null; then
     msg "Install homebrew..."
-    INTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     brewPrefix="/usr/local"
     if [[ "$(uname -m)" == "arm64" ]]; then
