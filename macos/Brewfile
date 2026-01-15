@@ -234,8 +234,6 @@ cask "cloudflare-warp"
 cask "cyberduck"
 # Virtual monitor for screen sharing
 cask "deskpad"
-# App for note taking, organising, task lists, and archiving
-cask "evernote", args: { appdir: "/Applications" }
 # Web browser
 cask "firefox", args: { appdir: "/Applications" }
 cask "font-fira-code-nerd-font"
