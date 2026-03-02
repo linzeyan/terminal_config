@@ -4,16 +4,16 @@ set -e
 scriptName="$HOME/.__install.bash"
 
 cleanup() {
-  msg "cleanup $scriptName"
-  rm -f $scriptName
+  echo "cleanup $scriptName"
+  rm -f "$scriptName"
 }
 
 trap cleanup EXIT INT TERM
 
-rm -f $scriptName
+rm -f "$scriptName"
 
 echo "Downloading install.bash"
-curl -sSfL https://raw.githubusercontent.com/linzeyan/terminal_config/master/macos/install.bash -o $scriptName
+curl -sSfL https://raw.githubusercontent.com/linzeyan/terminal_config/master/macos/install.bash -o "$scriptName"
 
 echo "Execute install.bash"
-bash $scriptName
+bash "$scriptName"

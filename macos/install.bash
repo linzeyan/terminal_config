@@ -1,26 +1,32 @@
 #!/usr/bin/env bash
 
-set -ex
+set -e
 
 GREEN='\033[0;32m'
+RED='\033[0;31m'
 RESET='\033[0m'
 repoUri='https://github.com/linzeyan/terminal_config.git'
 dirName="$HOME/git/terminal_config/macos"
 
+brewPrefix="/usr/local"
+if [[ "$(uname -m)" == "arm64" ]]; then
+  brewPrefix="/opt/homebrew"
+fi
+
 msg() {
-  echo "${GREEN}${1}${RESET}"
+  echo -e "${GREEN}${1}${RESET}"
+}
+
+err() {
+  echo -e "${RED}${1}${RESET}" >&2
 }
 
 installHomeBrew() {
   msg "Check homebrew is installed or not."
-  if ! which brew &> /dev/null; then
+  if ! which brew &>/dev/null; then
     msg "Install homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    brewPrefix="/usr/local"
-    if [[ "$(uname -m)" == "arm64" ]]; then
-      brewPrefix="/opt/homebrew"
-    fi
     brewShellEnv='eval "$('"$brewPrefix"'/bin/brew shellenv)"'
     zProfile="$HOME/.zprofile"
     # Ensure zprofile exists
@@ -29,14 +35,14 @@ installHomeBrew() {
     fi
     # Add brew shellenv only once
     if ! grep -Fxq "$brewShellEnv" "$zProfile"; then
-      echo >> "$zProfile"
-      echo "$brewShellEnv" >> "$zProfile"
+      echo >>"$zProfile"
+      echo "$brewShellEnv" >>"$zProfile"
     fi
     # Load brew into current shell if available
     if [[ -x "$brewPrefix/bin/brew" ]]; then
       eval "$("$brewPrefix/bin/brew" shellenv)"
     else
-      echo "❌ brew not found at $brewPrefix/bin/brew"
+      err "brew not found at $brewPrefix/bin/brew"
       exit 1
     fi
     return 0
@@ -49,63 +55,62 @@ installHomeBrew() {
 installPackages() {
   installHomeBrew
 
-  mkdir -p $HOME/git
+  mkdir -p "$HOME/git"
   if [[ ! -d "$HOME/git/terminal_config" ]]; then
     msg "Clone Config Repo"
-    cd $HOME/git && git clone ${repoUri}
+    cd "$HOME/git" && git clone "${repoUri}"
   fi
 
   msg "Restore brew"
   brew bundle --file="${dirName}/Brewfile"
-
-  msg "Install Fira-code"
-  brew install font-fira-code-nerd-font
-
-  # msg "GPG"
-  # brew install pinentry-mac
-  # mkdir -p ~/.gnupg
-  # echo 'no-tty' >~/.gnupg/gpg.conf
-  # echo 'pinentry-program /usr/local/bin/pinentry-mac' > ~/.gnupg/gpg-agent.conf
 }
 
-zshOMZ() {
-  if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
-    msg "Clone Oh-My-Zsh"
-    git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-  fi
-  if [[ ! -d "${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]]; then
-    msg "Install zsh plugins == > zsh-autosuggestions"
-    git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  fi
-  if [[ ! -d "${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]]; then
-    msg "Install zsh plugins == > zsh-syntax-highlighting"
-    git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-  fi
-  if [[ ! -d "$HOME/.git-radar" ]]; then
-    msg "Clone git-radar"
-    git clone --depth=1 https://github.com/linzeyan/git-radar.git ~/.git-radar
-  fi
-}
+# Replaced by zshZim. Kept for reference.
+# zshOMZ() {
+#   if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+#     msg "Clone Oh-My-Zsh"
+#     git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+#   fi
+#   if [[ ! -d "${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]]; then
+#     msg "Install zsh plugins ==> zsh-autosuggestions"
+#     git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
+#   fi
+#   if [[ ! -d "${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]]; then
+#     msg "Install zsh plugins ==> zsh-syntax-highlighting"
+#     git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+#   fi
+#   if [[ ! -d "$HOME/.git-radar" ]]; then
+#     msg "Clone git-radar"
+#     git clone --depth=1 https://github.com/linzeyan/git-radar.git ~/.git-radar
+#   fi
+# }
 
 otherConfigs() {
   msg "Configure git global config"
-  ln -sf ${dirName}/.gitconfig ~/.gitconfig
+  ln -sf "${dirName}/.gitconfig" ~/.gitconfig
   msg "Generate .zshrc"
-  ln -sf ${dirName}/.zshrc ~/.zshrc
+  ln -sf "${dirName}/.zshrc" ~/.zshrc
+
   msg "Generate .vimrc"
-  ln -sf ${dirName}/.vimrc ~/.vimrc
-  git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  # git clone --depth=1 https://github.com/chr4/nginx.vim ~/.vim/bundle/nginx.vim
+  ln -sf "${dirName}/.vimrc" ~/.vimrc
+  if [[ ! -d "$HOME/.vim/bundle/Vundle.vim" ]]; then
+    msg "Clone Vundle.vim"
+    git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  fi
   msg "Install Vim Plugin"
   vim -c 'BundleInstall' -c 'q' -c 'q'
-  msg "Copy configs"
-  ln -sf ${dirName}/.tmux.conf ~/.tmux.conf
-  ln -sf ${dirName}/.ssh ~/.ssh
-  ln -sf ${dirName}/curltime ~/curltime
-  ln -sf ${dirName}/.snipaste ~/.snipaste
-  msg "Copy lrzsz scripts"
-  chmod +x ${dirName}/iterm2-zmodem/iterm2-*
-  sudo ln -sf ${dirName}/iterm2-zmodem/iterm2-* /usr/local/bin/
+
+  msg "Symlink configs"
+  ln -sf "${dirName}/.tmux.conf" ~/.tmux.conf
+  ln -sf "${dirName}/.ssh" ~/.ssh
+  ln -sf "${dirName}/curltime" ~/curltime
+  ln -sf "${dirName}/.snipaste" ~/.snipaste
+
+  msg "Setup lrzsz scripts"
+  chmod +x "${dirName}/iterm2-zmodem/iterm2-"*
+  sudo ln -sf "${dirName}/iterm2-zmodem/iterm2-"* "${brewPrefix}/bin/"
+
+  msg "Accept Xcode license"
   sudo xcodebuild -license accept
 }
 
@@ -115,7 +120,7 @@ zshZim() {
     curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
   fi
 
-  ln -sf ${dirName}/.zimrc ~/.zimrc
+  ln -sf "${dirName}/.zimrc" ~/.zimrc
 
   if [[ ! -d "$HOME/.zim/modules/powerlevel10k" ]]; then
     msg "Clone PowerLevel10k"
@@ -123,8 +128,8 @@ zshZim() {
   fi
   msg "Install PowerLevel10k"
   export ZIM_HOME="$HOME/.zim"
-  zsh $HOME/.zim/zimfw.zsh install
-  ln -sf ${dirName}/.p10k.zsh ~/.p10k.zsh
+  zsh "$HOME/.zim/zimfw.zsh" install
+  ln -sf "${dirName}/.p10k.zsh" ~/.p10k.zsh
 }
 
 environmentSetting() {
