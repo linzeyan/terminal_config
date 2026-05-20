@@ -110,8 +110,13 @@ otherConfigs() {
   chmod +x "${dirName}/iterm2-zmodem/iterm2-"*
   sudo ln -sf "${dirName}/iterm2-zmodem/iterm2-"* "${brewPrefix}/bin/"
 
-  msg "Accept Xcode license"
-  sudo xcodebuild -license accept
+  msg "Restore mise config"
+  mkdir -p ~/.config/mise
+  ln -sf "${dirName}/.mise-config.toml" ~/.config/mise/config.toml
+  mise install
+
+  # msg "Accept Xcode license"
+  # sudo xcodebuild -license accept
 }
 
 zshZim() {

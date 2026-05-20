@@ -73,16 +73,16 @@ if type brew &>/dev/null; then
 
   #rm -f ~/.zcompdump
   autoload -Uz compinit
-  compinit
 fi
 # . ${PYTHON_BIN}/aws_zsh_completer.sh
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
-source ~/.cargo/env
 
 # for carapace https://carapace.sh/
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
 zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'
+eval "$(direnv hook zsh)"
+eval "$(mise activate zsh)"

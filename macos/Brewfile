@@ -9,70 +9,42 @@ tap "rs/tap"
 tap "rsteube/tap"
 # Run your GitHub Actions locally
 brew "act"
-# Simple, modern, secure file encryption
-brew "age"
-# New file format for still image compression
-brew "jpeg-xl"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
+# Code searching, linting, rewriting
+brew "ast-grep"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Terminal bandwidth utilization tool
-brew "bandwhich"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
-# Clone of cat(1) with syntax highlighting and Git integration
-brew "bat"
-# Parser generator
-brew "bison"
-# Resource monitor. C++ version and continuation of bashtop and bpytop
-brew "btop"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
+# Parser generator
+brew "bison"
 # Core application library for C
 brew "glib"
-# Ruby environment tool
-brew "chruby"
+# Multi-shell multi-command argument completer
+brew "carapace"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
-# Cloudflare Tunnel client (formerly Argo Tunnel)
-brew "cloudflared"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Perform a dhcp-request to check whether a dhcp-server is running
+brew "dhcping"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
-# C library SSHv1/SSHv2 client and server protocols
-brew "libssh"
-# Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima"
-# Get a file from an HTTP, HTTPS or FTP server
-brew "curl"
-# JSON, YAML, TOML, XML, and CSV query and modification tool
-brew "dasel"
-# Perform a dhcp-request to check whether a dhcp-server is running
-brew "dhcping"
-# GNU Pretty Good Privacy (PGP) package
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Visually compare two PDF files
 brew "diff-pdf"
-# Tool for exploring each layer in a docker image
-brew "dive"
-# Synchronize your DNS to multiple providers from a simple DSL
-brew "dnscontrol"
-# Pack, ship and run any application as a lightweight container
-brew "docker"
-# More intuitive version of du in rust
-brew "dust"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Program that can automate interactive applications
 brew "expect"
-# Simple, fast and user-friendly alternative to find
-brew "fd"
-# Stack trace visualizer
-brew "flamegraph"
-# Terminal JSON viewer
-brew "fx"
 # GNU compiler collection
 brew "gcc"
 # Library for encoding and decoding .avif files
@@ -85,20 +57,6 @@ brew "gdbm"
 brew "gdk-pixbuf"
 # Distributed revision control system
 brew "git"
-# Highly customizable changelog generator
-brew "git-cliff"
-# Syntax-highlighting pager for git and diff output
-brew "git-delta"
-# Render markdown on the CLI
-brew "glow"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
-# Generate introspection data for GObject libraries
-brew "gobject-introspection"
-# Fast linters runner for Go
-brew "golangci-lint"
-# Deliver Go binaries as fast and easily as possible
-brew "goreleaser"
 # Image manipulation
 brew "netpbm"
 # OpenType text shaping engine
@@ -107,125 +65,57 @@ brew "harfbuzz"
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
-# Smarter Dockerfile linter to validate best practices
-brew "hadolint"
 # Improved top (interactive process viewer)
 brew "htop"
-# Configurable static site generator
-brew "hugo"
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Calculate various network masks, etc. from a given IP address
 brew "ipcalc"
 # CLI wrapper for basic network utilities on macOS - ip command
 brew "iproute2mac"
-# Manage your Java environment
-brew "jenv"
-# Lightweight and flexible command-line JSON processor
-brew "jq"
-# Modern load testing tool, using Go and JavaScript
-brew "k6"
-# Command-line tool to kill processes listening on a specific port
-brew "killport"
+# New file format for still image compression
+brew "jpeg-xl"
 # Image processing and image analysis library
 brew "leptonica"
 # Portable Foreign Function Interface library
 brew "libffi"
+# C library SSHv1/SSHv2 client and server protocols
+brew "libssh"
 # YAML Parser
 brew "libyaml"
-# Curses-based tool for viewing and analyzing log files
-brew "lnav"
 # Tools for zmodem/xmodem/ymodem file transfer
 brew "lrzsz"
-# Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
-brew "marp-cli"
 # Mac App Store command-line interface
 brew "mas"
-# Show markdown documents on text terminals
-brew "mdcat"
-# Like sed, awk, cut, join & sort for name-indexed data such as CSV
-brew "miller"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
-# CLI tool for saving complete web pages as a single HTML file
-brew "monolith"
-# Fast, highly customisable system info script
-brew "neofetch"
-# Port scanning utility for large networks
-brew "nmap"
-# Manage multiple Node.js versions
-brew "nvm"
-# Command-line Git information tool
-brew "onefetch"
-# Drop-in replacement for Terraform. Infrastructure as Code Tool
-brew "opentofu"
-# Swiss-army knife of markup format conversion
-brew "pandoc"
-# Tool for visualizing differences between two pdf files
-brew "pdf-diff"
-# Friendly PIL fork (Python Imaging Library)
-brew "pillow"
-# Pinentry for GPG on Mac
-brew "pinentry-mac"
-# Framework for managing multi-language pre-commit hooks
-brew "pre-commit"
-# Parse HTML at the command-line
-brew "pup"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Wrapper around ripgrep that adds multiple rich file types
 brew "ripgrep-all"
 # Utility that provides fast incremental file transfer
 brew "rsync"
-# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
-brew "ruby-install"
-# Rust toolchain installer
-brew "rustup"
-# Tool for shell commands execution, visualization and alerting
-brew "sampler"
-# Fast and accurate code counter with complexity and COCOMO estimates
-brew "scc"
-# Terminal based presentation tool
-brew "slides"
-# Editor of encrypted files
-brew "sops"
-# Crypto and x509 Swiss-Army-Knife
-brew "step"
 # Easiest, most secure way to use WireGuard and 2FA
 brew "tailscale"
 # Traceroute implementation using TCP packets
 brew "tcptraceroute"
 # OCR (Optical Character Recognition) engine
 brew "tesseract"
-# Simplified and community-driven man pages
-brew "tldr"
-# Terminal multiplexer
-brew "tmux"
 # Anonymizing overlay network for TCP
 brew "tor"
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
 # HTTP load testing tool and library
 brew "vegeta"
-# Command-line client for WebSockets
-brew "websocat"
 # Internet file retriever
 brew "wget"
 # Tools for the WireGuard secure network tunnel
 brew "wireguard-tools"
-# Process YAML, JSON, XML, CSV and properties documents from the CLI
-brew "yq"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Terraform
-brew "hashicorp/tap/terraform"
 brew "linzeyan/tools/ops-cli"
 # JSON Aggregation CLI
 brew "rs/tap/jaggr"
 # iTerm2 expvar/JSON monitoring tool
 brew "rs/tap/jplot"
-# A multi-shell completion binary
-brew "rsteube/tap/carapace"
 # App for managing battery charging. (Also installs a CLI on first use.)
 cask "battery"
 # Free app that makes your Internet safer
@@ -269,22 +159,20 @@ cask "telegram-desktop"
 cask "tempbox"
 # Unpacks archive files
 cask "the-unarchiver", args: { appdir: "/Applications" }
-# Free and open-source OpenVPN client
-cask "tunnelblick"
-# Development environment
-cask "vagrant"
 # Open-source code editor
 cask "visual-studio-code"
-# Multimedia player
-cask "vlc"
-# Network protocol analyzer
-cask "wireshark-app"
 mas "AdBlocker", id: 1018301773
 mas "Amphetamine", id: 937984704
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 361285480
 mas "LINE", id: 539883307
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
 mas "Xcode", id: 497799835
 vscode "adpyke.codesnap"
 vscode "ahmadalli.vscode-nginx-conf"
+vscode "alfredbirk.go-to-next-change"
 vscode "anthropic.claude-code"
 vscode "arjun.swagger-viewer"
 vscode "bierner.markdown-mermaid"
@@ -296,6 +184,7 @@ vscode "continue.continue"
 vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
+vscode "emeraldwalk.runonsave"
 vscode "eriklynd.json-tools"
 vscode "esbenp.prettier-vscode"
 vscode "exiasr.hadolint"
@@ -303,6 +192,7 @@ vscode "ezforo.copy-relative-path-and-line-numbers"
 vscode "fill-labs.dependi"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
+vscode "github.copilot-chat"
 vscode "golang.go"
 vscode "google.geminicodeassist"
 vscode "graphql.vscode-graphql"
@@ -317,17 +207,15 @@ vscode "jebbs.plantuml"
 vscode "jinliming2.vscode-go-template"
 vscode "kejun.devtoys"
 vscode "kisstkondoros.vscode-gutter-preview"
+vscode "koihik.vscode-lua-format"
+vscode "llvm-vs-code-extensions.lldb-dap"
 vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "lunuan.kubernetes-templates"
-vscode "marp-team.marp-vscode"
 vscode "mechatroner.rainbow-csv"
 vscode "mhutchie.git-graph"
 vscode "mikestead.dotenv"
 vscode "ms-ceintl.vscode-language-pack-zh-hant"
 vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode.remote-explorer"
 vscode "mushan.vscode-paste-image"
 vscode "nhoizey.gremlins"
 vscode "oderwat.indent-rainbow"
@@ -339,26 +227,24 @@ vscode "randomfractalsinc.vscode-data-preview"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
-vscode "saoudrizwan.claude-dev"
 vscode "shardulm94.trailing-spaces"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "sumneko.lua"
-vscode "tabnine.tabnine-vscode"
+vscode "svelte.svelte-vscode"
+vscode "swiftlang.swift-vscode"
 vscode "tamasfe.even-better-toml"
+vscode "tauri-apps.tauri-vscode"
 vscode "tim-koehler.helm-intellisense"
 vscode "tombonnike.vscode-status-bar-format-toggle"
 vscode "tooltitudeteam.tooltitude"
 vscode "tooltitudeteam.tooltitude-pb"
 vscode "usernamehw.errorlens"
-vscode "vadimcn.vscode-lldb"
 vscode "vscode-icons-team.vscode-icons"
 vscode "yzane.markdown-pdf"
 vscode "yzhang.markdown-all-in-one"
 vscode "zainchen.json"
-go "golang.org/x/perf/cmd/benchstat"
-go "golang.org/x/tools/cmd/deadcode"
-go "github.com/go-delve/delve/cmd/dlv"
-go "golang.org/x/mobile/cmd/gobind"
-go "github.com/golangci/golangci-lint/cmd/golangci-lint"
-go "golang.org/x/tools/gopls"
-go "golang.org/x/vuln/cmd/govulncheck"
+vscode "ziglang.vscode-zig"
+go "cmd/go"
+go "cmd/gofmt"
+npm "corepack"
+npm "pnpm"
