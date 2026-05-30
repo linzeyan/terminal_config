@@ -91,6 +91,8 @@ brew "mas"
 brew "mise"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
+# Deep clean and optimize your Mac
+brew "mole"
 # Wrapper around ripgrep that adds multiple rich file types
 brew "ripgrep-all"
 # Utility that provides fast incremental file transfer
@@ -153,6 +155,8 @@ cask "proxyman"
 cask "sequel-ace"
 # Snip or pin screenshots
 cask "snipaste", args: { appdir: "/Applications" }
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # Disposable email client
@@ -246,5 +250,10 @@ vscode "zainchen.json"
 vscode "ziglang.vscode-zig"
 go "cmd/go"
 go "cmd/gofmt"
+cargo "agent-code"
+uv "huggingface-hub", with: ["hf-xet"]
+uv "litellm[proxy]"
+uv "mlx"
+uv "mlx-lm", with: ["transformers git+https://github.com/huggingface/transformers.git"]
 npm "corepack"
 npm "pnpm"
