@@ -120,8 +120,14 @@ brew "rs/tap/jaggr"
 brew "rs/tap/jplot"
 # App for managing battery charging. (Also installs a CLI on first use.)
 cask "battery"
+# 3D creation suite
+cask "blender"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
+# Node-based image, video and audio generator
+cask "comfyui"
 # Server and cloud storage browser
 cask "cyberduck"
 # Virtual monitor for screen sharing
@@ -248,12 +254,19 @@ vscode "yzane.markdown-pdf"
 vscode "yzhang.markdown-all-in-one"
 vscode "zainchen.json"
 vscode "ziglang.vscode-zig"
+go "github.com/google/capslock/cmd/capslock"
 go "cmd/go"
 go "cmd/gofmt"
-cargo "agent-code"
+go "mvdan.cc/gofumpt"
+go "golang.org/x/tools/gopls"
+go "github.com/openrdap/rdap/cmd/rdap"
+cargo "code2prompt"
+cargo "ouch"
 uv "huggingface-hub", with: ["hf-xet"]
 uv "litellm[proxy]"
+uv "mflux"
 uv "mlx"
+uv "mlx-gen"
 uv "mlx-lm", with: ["transformers git+https://github.com/huggingface/transformers.git"]
 npm "corepack"
 npm "pnpm"

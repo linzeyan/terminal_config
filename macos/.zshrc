@@ -86,3 +86,22 @@ source <(carapace _carapace)
 zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'
 eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
+eval "$(zoxide init zsh)"
+# oMLX: CLI shim path begin
+case ":$PATH:" in
+  *":$HOME/.omlx/bin:"*) ;;
+  *) export PATH="$HOME/.omlx/bin:$PATH" ;;
+esac
+# oMLX: CLI shim path end
+# oMLX: persisted base path override
+export OMLX_BASE_PATH="/Users/ricky/git/mlx-dir/.omlx"
+
+# pnpm
+export PNPM_HOME="/Users/ricky/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+
+alias agent='ANTHROPIC_BASE_URL='http://0.0.0.0:8000' ANTHROPIC_AUTH_TOKEN='dummy' ANTHROPIC_DEFAULT_OPUS_MODEL='Qwen3-Next-80B-A3B-Thinking-8bit' ANTHROPIC_DEFAULT_SONNET_MODEL='Qwen3-Coder-30B-A3B-Instruct-8bit' ANTHROPIC_DEFAULT_HAIKU_MODEL='gemma-4-31b-it-4bit' API_TIMEOUT_MS=3000000 CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1 claude'
