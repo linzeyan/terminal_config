@@ -7,12 +7,8 @@ tap "kubefirst/tools"
 tap "linzeyan/tools"
 tap "rs/tap"
 tap "rsteube/tap"
-# Run your GitHub Actions locally
-brew "act"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
-# Code searching, linting, rewriting
-brew "ast-grep"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # GNU internationalization (i18n) and localization (l10n) library
@@ -21,8 +17,6 @@ brew "gettext"
 brew "bison"
 # Core application library for C
 brew "glib"
-# Multi-shell multi-command argument completer
-brew "carapace"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cryptography and SSL/TLS Toolkit

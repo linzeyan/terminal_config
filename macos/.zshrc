@@ -48,23 +48,12 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=yellow,bold'
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=magenta,bold'
 ZSH_HIGHLIGHT_STYLES[cursor]='bg=blue'
 # ZSH_HIGHLIGHT_STYLES[line]='bold'
-# ## pip zsh completion start
-# function _pip_completion {
-#   local words cword
-#   read -Ac words
-#   read -cn cword
-#   reply=( $( COMP_WORDS="$words[*]" \
-#              COMP_CWORD=$(( cword-1 )) \
-#              PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
-# }
-# compctl -K _pip_completion pip3
-## pip zsh completion end
+
 ## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # export PROMPT="%1/%\$(git-radar --zsh) "
 # export PROMPT="%(?:%{%}➜ :%{%}➜ )%{$fg[cyan]%}%c%{$reset_color%} \$(git-radar --zsh )"
 . /usr/local/bin/library.bash
-#. <(kubectl completion zsh)
 
 if type brew &>/dev/null; then
   HOMEBREW_PREFIX=$(brew --prefix)
@@ -74,7 +63,6 @@ if type brew &>/dev/null; then
   #rm -f ~/.zcompdump
   autoload -Uz compinit
 fi
-# . ${PYTHON_BIN}/aws_zsh_completer.sh
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
@@ -107,5 +95,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+
+# mise / homebrew 共享的 GitHub Token，提升 API 速率限制
+# export GITHUB_TOKEN="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 alias agent='ANTHROPIC_BASE_URL='http://0.0.0.0:8000' ANTHROPIC_AUTH_TOKEN='dummy' ANTHROPIC_DEFAULT_OPUS_MODEL='Qwen3-Next-80B-A3B-Thinking-8bit' ANTHROPIC_DEFAULT_SONNET_MODEL='Qwen3-Coder-30B-A3B-Instruct-8bit' ANTHROPIC_DEFAULT_HAIKU_MODEL='gemma-4-31b-it-4bit' API_TIMEOUT_MS=3000000 CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1 claude'
