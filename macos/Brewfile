@@ -93,8 +93,6 @@ brew "mise"
 brew "mkcert"
 # Deep clean and optimize your Mac
 brew "mole"
-# Wrapper around ripgrep that adds multiple rich file types
-brew "ripgrep-all"
 # Utility that provides fast incremental file transfer
 brew "rsync"
 # Easiest, most secure way to use WireGuard and 2FA
@@ -254,15 +252,10 @@ vscode "yzane.markdown-pdf"
 vscode "yzhang.markdown-all-in-one"
 vscode "zainchen.json"
 vscode "ziglang.vscode-zig"
-go "github.com/google/capslock/cmd/capslock"
 go "cmd/go"
 go "cmd/gofmt"
 go "mvdan.cc/gofumpt"
 go "golang.org/x/tools/gopls"
-go "github.com/openrdap/rdap/cmd/rdap"
-cargo "code2prompt"
-cargo "diskus"
-cargo "ouch"
 uv "huggingface-hub", with: ["hf-xet"]
 uv "litellm[proxy]"
 uv "mflux"
@@ -270,4 +263,3 @@ uv "mlx"
 uv "mlx-gen"
 uv "mlx-lm", with: ["transformers git+https://github.com/huggingface/transformers.git"]
 npm "corepack"
-npm "pnpm"
