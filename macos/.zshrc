@@ -87,6 +87,9 @@ zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'exter
 eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
 eval "$(zoxide init zsh)"
+export LS_COLORS="$(vivid generate modus-vivendi)"
+alias ls="eza --icons"
+alias du="diskus"
 # oMLX: CLI shim path begin
 case ":$PATH:" in
   *":$HOME/.omlx/bin:"*) ;;

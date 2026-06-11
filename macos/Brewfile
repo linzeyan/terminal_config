@@ -261,6 +261,7 @@ go "mvdan.cc/gofumpt"
 go "golang.org/x/tools/gopls"
 go "github.com/openrdap/rdap/cmd/rdap"
 cargo "code2prompt"
+cargo "diskus"
 cargo "ouch"
 uv "huggingface-hub", with: ["hf-xet"]
 uv "litellm[proxy]"
