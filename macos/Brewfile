@@ -25,10 +25,10 @@ brew "openssl@3"
 brew "curl"
 # Perform a dhcp-request to check whether a dhcp-server is running
 brew "dhcping"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # PDF rendering library (based on the xpdf-3.0 code base)
@@ -105,11 +105,11 @@ brew "wget"
 brew "wireguard-tools"
 # UNIX shell (command interpreter)
 brew "zsh"
-brew "linzeyan/tools/ops-cli"
+brew "linzeyan/tools/ops-cli", trusted: true
 # JSON Aggregation CLI
-brew "rs/tap/jaggr"
+brew "rs/tap/jaggr", trusted: true
 # iTerm2 expvar/JSON monitoring tool
-brew "rs/tap/jplot"
+brew "rs/tap/jplot", trusted: true
 # App for managing battery charging. (Also installs a CLI on first use.)
 cask "battery"
 # 3D creation suite
