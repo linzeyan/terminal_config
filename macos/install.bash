@@ -87,32 +87,32 @@ installPackages() {
 
 otherConfigs() {
   msg "Configure git global config"
-  ln -sf "${dirName}/.gitconfig" ~/.gitconfig
+  ln -sf "${dirName}/.gitconfig" "$HOME/.gitconfig"
   msg "Generate .zshrc"
-  ln -sf "${dirName}/.zshrc" ~/.zshrc
+  ln -sf "${dirName}/.zshrc" "$HOME/.zshrc"
 
   msg "Generate .vimrc"
-  ln -sf "${dirName}/.vimrc" ~/.vimrc
+  ln -sf "${dirName}/.vimrc" "$HOME/.vimrc"
   if [[ ! -d "$HOME/.vim/bundle/Vundle.vim" ]]; then
     msg "Clone Vundle.vim"
-    git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
   fi
   msg "Install Vim Plugin"
   vim -c 'BundleInstall' -c 'q' -c 'q'
 
   msg "Symlink configs"
-  ln -sf "${dirName}/.tmux.conf" ~/.tmux.conf
-  ln -sf "${dirName}/.ssh" ~/.ssh
-  ln -sf "${dirName}/curltime" ~/curltime
-  ln -sf "${dirName}/.snipaste" ~/.snipaste
+  ln -sf "${dirName}/.tmux.conf" "$HOME/.tmux.conf"
+  ln -sf "${dirName}/.ssh" "$HOME/.ssh"
+  ln -sf "${dirName}/curltime" "$HOME/curltime"
+  ln -sf "${dirName}/.snipaste" "$HOME/.snipaste"
 
   msg "Setup lrzsz scripts"
   chmod +x "${dirName}/iterm2-zmodem/iterm2-"*
   sudo ln -sf "${dirName}/iterm2-zmodem/iterm2-"* "${brewPrefix}/bin/"
 
   msg "Restore mise config"
-  mkdir -p ~/.config/mise
-  ln -sf "${dirName}/.mise-config.toml" ~/.config/mise/config.toml
+  mkdir -p "$HOME/.config/mise"
+  ln -sf "${dirName}/.mise-config.toml" "$HOME/.config/mise/config.toml"
   mise install
 
   # msg "Accept Xcode license"
@@ -125,16 +125,16 @@ zshZim() {
     curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
   fi
 
-  ln -sf "${dirName}/.zimrc" ~/.zimrc
+  ln -sf "${dirName}/.zimrc" "$HOME/.zimrc"
 
   if [[ ! -d "$HOME/.zim/modules/powerlevel10k" ]]; then
     msg "Clone PowerLevel10k"
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zim/modules/powerlevel10k
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.zim/modules/powerlevel10k"
   fi
   msg "Install PowerLevel10k"
   export ZIM_HOME="$HOME/.zim"
   zsh "$HOME/.zim/zimfw.zsh" install
-  ln -sf "${dirName}/.p10k.zsh" ~/.p10k.zsh
+  ln -sf "${dirName}/.p10k.zsh" "$HOME/.p10k.zsh"
 }
 
 environmentSetting() {

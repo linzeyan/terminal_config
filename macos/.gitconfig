@@ -1,12 +1,14 @@
-# [branch]
-# 	sort = -committerdate
-# [tag]
-# 	sort = version:refname
-# [column]
-#     ui = auto
-# [color]
-# 	status = always
-# 	ui = true
+[init]
+	defaultBranch = main
+[branch]
+	sort = -committerdate # 看 branch 時最新動過的分支排在最上面
+[tag]
+	sort = version:refname
+[column]
+    ui = auto
+[color]
+	status = always
+	ui = true
 [core]
 	repositoryformatversion = 0
 	filemode = true
@@ -15,61 +17,41 @@
 	autocrlf = input
 	editor = vim
 	ignorecase = false
-# 	precomposeunicode = true
-# 	safecrlf = true
-# 	excludesfile = ~/.gitignore
-# 	pager = delta
-# 	# fsmonitor = true
-# 	# untrackedCache = true
+	commitGraph = true
+	pager = delta
 
-# [interactive]
-#     diffFilter = delta --color-only
-# [delta]
-# 	# https://dandavison.github.io/delta/introduction.html
-#     navigate = true    # use n and N to move between diff sections
-#     # delta detects terminal colors automatically; set one of these to disable auto-detection
-#     dark = true
-#     # light = true
-# 	true-color = always
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+	# https://dandavison.github.io/delta/introduction.html
+    navigate = true    # use n and N to move between diff sections
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    dark = true
+    # light = true
+	true-color = always
 
-# 	side-by-side = true
-# 	line-numbers = true
+	side-by-side = true
+	line-numbers = true
 
-# 	hyperlinks = true
-# 	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
-#     # hyperlinks-file-link-format = "idea://open?file={path}&line={line}"
-#     # hyperlinks-file-link-format = "pycharm://open?file={path}&line={line}"
+	hyperlinks = true
+	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+    # hyperlinks-file-link-format = "idea://open?file={path}&line={line}"
+    # hyperlinks-file-link-format = "pycharm://open?file={path}&line={line}"
 
-# [merge]
-#     conflictstyle = zdiff3
-# [rebase]
-# 	autoSquash = true
-# 	autoStash = true
-# 	updateRefs = true
-# [rerere]
-# 	enabled = true
-# 	autoupdate = true
-# [fetch]
-# 	prune = true
-# 	# pruneTags = true
-#     all = true
-# [pull]
-#     ff = only
-# 	# rebase = true
-# [push]
-# 	default = simple
-# 	autoSetupRemote = true
-# 	followTags = true
-# [diff]
-# 	algorithm = patience
-# 	# algorithm = histogram
-# 	colorMoved = plain
-# 	mnemonicPrefix = true
-# 	renames = true
+[diff]
+	tool = difftastic
+[difftool "difftastic"]
+    # 指定外部工具執行 difftastic 的指令
+    cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    # 確保使用 difftool 時不會被 delta 二次攔截處理
+    difftool = true
+[alias]
+    df = difftool --no-prompt --tool=difftastic
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	st = status -sb
+	br = branch -vv
 
-# [alias]
-# 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-# #  project-summary = !which onefetch && onefetch
 [user]
 	email = zeyanlin@outlook.com
 	name = Ricky
@@ -77,25 +59,11 @@
 # [commit]
 # 	gpgsign = false
 #     # verbose = true
-# [remote "origin"]
-# 	fetch = +refs/heads/*:refs/remotes/origin/*
-# 	push = +refs/tags/*
-# 	push = +refs/heads/*
 
-# [help]
-# 	autocorrect = prompt
-# #[include]
-# #	path = .gitconfig
-# #[credential]
-# #	helper = cache --timeout=3600
-# #  helper = store
-# #[merge]
-# #	algorithm = patience
-# #[merge "diff"]
-# #	algorithm = patience
-# #[oh-my-zsh]
-# #  hide-status = 1
+[push]
+    autoSetupRemote = true
 
+# ==================== 外部與工作環境隔離 ====================
 # # for golang
 # [url "git@gitlab.example.com:"]
 # 	insteadOf = https://gitlab.example.com/

@@ -85,12 +85,8 @@ ZSH_HIGHLIGHT_STYLES[cursor]='bg=blue' # 游標所在文字背景色
 ## Completion 提示格式
 zstyle ':completion:*' menu select # 當有多個候選項時，顯示選單
 zstyle ':completion:*' group-name '' # 保留補全結果群組機制，允許群組名稱顯示
-zstyle ':completion:*' group-order \
-  'commands' \
-  'aliases' \
-  'functions' \
-  'parameters' \
-  'files'
+zstyle ':completion:*' group-order 'commands' 'aliases' 'functions' 'parameters' 'files'
+zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'
 zstyle ':completion:*' format $'\e[2;37m%d\e[m' # 群組標題顯示格式
 # ==================================================
 
@@ -148,8 +144,21 @@ bindkey '^[[1;3D' backward-word # Option + ←
 ## 使用 vivid 產生 LS_COLORS 配色
 export LS_COLORS="$(vivid generate modus-vivendi)"
 
-alias ls="eza --icons" # ls 改用 eza
+alias ls="eza --icons --group-directories-first" # 讓目錄排在檔案前面
+alias ll="eza --icons -l --group-directories-first" # 經典 ll (詳細列表)
+alias la="eza --icons -a --group-directories-first" # 經典 la (顯示隱藏檔)
+alias lla="eza --icons -la --group-directories-first" # 全開詳細列表
 alias du="diskus" # du 改用 diskus（速度更快）
+alias cp="cp -i" # 複製檔案前詢問，避免覆蓋重要檔案
+alias mv="mv -i" # 移動檔案前詢問，避免覆蓋重要檔案
+alias grep='grep --color=always'
+alias fgrep='fgrep --color=always'
+alias egrep='egrep --color=always'
+alias rg="rg --color=always"
+alias rga="rga --color=always"
+alias sg="sg --color=always"
+alias less="less -R" # less 支援顏色輸出
+alias neofetch="fastfetch"
 
 ## 載入自訂函式庫
 [[ -f /usr/local/bin/library.bash ]] && source /usr/local/bin/library.bash
