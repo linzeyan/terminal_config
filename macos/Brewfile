@@ -1,12 +1,7 @@
-tap "buo/cask-upgrade"
 tap "cloudflare/cloudflare"
-tap "derailed/k9s"
-tap "hashicorp/tap"
-tap "konstructio/taps"
-tap "kubefirst/tools"
+tap "lightpanda-io/browser"
 tap "linzeyan/tools"
 tap "rs/tap"
-tap "rsteube/tap"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -105,6 +100,8 @@ brew "wget"
 brew "wireguard-tools"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Headless browser for AI agents and automation (nightly build)
+brew "lightpanda-io/browser/lightpanda", trusted: true
 brew "linzeyan/tools/ops-cli", trusted: true
 # JSON Aggregation CLI
 brew "rs/tap/jaggr", trusted: true
@@ -119,7 +116,7 @@ cask "claude-code"
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
 # Node-based image, video and audio generator
-cask "comfyui"
+cask "comfy"
 # Server and cloud storage browser
 cask "cyberduck"
 # Virtual monitor for screen sharing
@@ -257,3 +254,4 @@ uv "mlx"
 uv "mlx-gen"
 uv "mlx-lm", with: ["transformers git+https://github.com/huggingface/transformers.git"]
 npm "corepack"
+npm "html-minifier-terser"
