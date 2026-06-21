@@ -94,7 +94,14 @@ zstyle ':completion:*' format $'\e[2;37m%d\e[m' # 群組標題顯示格式
 # 外部工具與 CLI 載入 (Evals & Sources)
 # ==================================================
 eval "$(direnv hook zsh)" # direnv：進入目錄時自動載入 .envrc
-eval "$(mise activate zsh)" # mise：管理多版本 Runtime（Node.js、Python、Go 等）
+## ==================================================
+# eval "$(mise activate zsh)" # mise：管理多版本 Runtime（Node.js、Python、Go 等）
+eval "$(mise activate zsh --shims)"
+## --shims 模式會在 PATH 前面放一層 shims，呼叫 shim 時才會載入 mise.toml 的 [env] 變數。這樣就不會把專案層級的環境變數污染到全域 shell 環境裡。
+### mise.toml 的 [env] 變數不會進到 shell。只在「呼叫某個 shim」的當下才載入。如果有用專案層級的 [env](例如 DATABASE_URL)並指望在 shell 裡直接 echo $DATABASE_URL,這在 shim 模式下會是空的。
+### cd/enter/exit/watch_files 這些 hook 不會觸發。
+### which node 會顯示 shim 路徑而不是帶版本號的真實路徑;要看真實路徑改用 mise which node。
+## ==================================================
 eval "$(zoxide init zsh)" # zoxide：智慧型 cd，根據使用頻率快速跳轉目錄
 eval "$(tirith init --shell zsh)" # tirith：Shell 助手
 

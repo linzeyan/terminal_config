@@ -1,86 +1,113 @@
+# ~/.config/mise/config.toml
+
 [tools]
-go = "latest"
-node = "22"
+# ── 語言 runtime ──────────────────────────────────────────────
+go     = "latest"   # 註:go: 工具會跟著它重新編譯,要可重現可改釘版本
+node   = "22"
 python = "3.12"
-rust = "stable"
-uv = "latest"
-"aqua:mvdan/sh" = "latest"
-git-cliff = "latest"
-golangci-lint = "latest"
-goreleaser = "latest"
-killport = "latest"
-hugo-extended = "0.148.2"
-# "aqua:imsnif/bandwhich" = "latest"
-"go:golang.org/x/tools/gopls" = "latest"
-"go:mvdan.cc/gofumpt" = "latest"
-# "go:golang.org/x/perf/cmd/benchstat" = "latest"
-"go:golang.org/x/tools/cmd/deadcode" = "latest"
-"go:github.com/go-delve/delve/cmd/dlv" = "latest"
+rust   = "stable"
+uv     = "latest"
+
+# ── Go 開發工具(用 active Go 從原始碼編譯)────────────────────
+"go:golang.org/x/tools/gopls"          = "latest"   # 建議維持 go:,讓它對齊你的 Go 版本
+"go:golang.org/x/tools/cmd/deadcode"   = "latest"
 "go:golang.org/x/vuln/cmd/govulncheck" = "latest"
-"aqua:trzsz/trzsz-ssh" = "latest"
-"aqua:sharkdp/vivid" = "latest"
-# jq = "latest"
-# "aqua:boyter/scc" = "latest"
-# "aqua:o2sh/onefetch" = "latest"
-# "aqua:nektos/act" = "latest"
-# age = "latest"
-# bat = "latest"
-# cloudflared = "latest"
-# dasel = "latest"
-# delta = "latest"
-# dive = "latest"
-# dust = "latest"
-# fd = "latest"
-# fx = "latest"
-# glow = "latest"
-# hadolint = "latest"
-# k6 = "latest"
-# opentofu = "latest"
-# pandoc = "latest"
-# sampler = "latest"
-# sops = "latest"
-# step = "latest"
-# tmux = "latest"
-# websocat = "latest"
-# yq = "latest"
-# "aqua:maaslalani/slides" = "latest"
-# "aqua:tealdeer-rs/tealdeer" = "latest"
-# "aqua:ericchiang/pup" = "latest"
-# "github:StackExchange/dnscontrol" = "latest"
-# "cargo:flamegraph" = "latest"
-# rtk = "latest"
-# "aqua:junegunn/fzf" = "latest"
-# "aqua:ajeetdsouza/zoxide" = "latest"
-# "aqua:linebender/resvg" = "latest"
-# "aqua:sxyazi/yazi" = "latest"
-# eza = "latest"
-# watchexec = "latest"
-# protobuf = "latest"
-# protoc-gen-go = "latest"
-# protoc-gen-go-grpc = "latest"
-# "npm:prettier" = "latest"
-# "npm:eslint" = "latest"
-# "npm:typescript" = "latest"
+"go:github.com/go-delve/delve/cmd/dlv" = "latest"
+"go:mvdan.cc/gofumpt"                  = "latest"   # 想要預編譯版可改成: gofumpt = "latest"
+# "go:golang.org/x/perf/cmd/benchstat" = "latest"
 # "go:github.com/openrdap/rdap/cmd/rdap" = "master"
 # "go:github.com/google/capslock/cmd/capslock" = "latest"
 # "go:gorm.io/gen/tools/gentool" = "latest"
-# "go:github.com/fullstorydev/grpcurl/cmd/grpcurl" = "latest"
-# "github:golang-migrate/migrate" = "latest"
 # "go:github.com/google/wire/cmd/wire" = "latest"
-# "aqua:mr-karan/doggo" = "latest"
-# "aqua:wagoodman/dive" = "latest"
-# "aqua:fastfetch-cli/fastfetch" = "latest"
-# "aqua:pnpm/pnpm" = "latest"
-# "aqua:j178/prek" = "latest"
-# "aqua:phiresky/ripgrep-all" = "latest"
+# "github:golang-migrate/migrate" = "latest"
+
+# ── 一般 CLI(registry → aqua 預編譯)──────────────────────────
+git-cliff     = "latest"
+golangci-lint = "latest"
+goreleaser    = "latest"
+killport      = "latest"
+hugo-extended = "0.148.2"
+shfmt         = "latest"   # 原本的 aqua:mvdan/sh,registry 短名就是 shfmt
+tssh          = "latest"   # 原本的 aqua:trzsz/trzsz-ssh
+vivid         = "latest"   # 原本的 aqua:sharkdp/vivid
+
+
+# ════════════════════════════════════════════════════════════════
+#  選用工具菜單 — 以下全部已驗證可解析,取消註解即可 mise install
+# ════════════════════════════════════════════════════════════════
+
+# ── 檔案 / 搜尋 / 瀏覽 ──
+# bat = "latest"
+# fd = "latest"
+# fzf = "latest"
+# eza = "latest"
+# dust = "latest"
+# glow = "latest"
+# delta = "latest"
+# difftastic = "latest"
 # "aqua:BurntSushi/ripgrep" = "latest"
-# "github:sheeki03/tirith" = "latest"
-# "aqua:aquasecurity/trivy" = "latest"
-# "aqua:vi/websocat" = "latest"
-# "github:upx/upx" = "latest"
-# "github:mufeedvh/code2prompt" = "latest"
+# "aqua:phiresky/ripgrep-all" = "latest"
+# "aqua:ajeetdsouza/zoxide" = "latest"
+# "aqua:sxyazi/yazi" = "latest"
 # "github:sharkdp/diskus" = "latest"
 # "github:ouch-org/ouch" = "latest"
-# ast-grep = "latest"
+
+# ── 資料 / 格式處理 ──
+# jq = "latest"
+# yq = "latest"
+# dasel = "latest"
+# fx = "latest"
+# pandoc = "latest"
+
+# ── DevOps / 容器 / 安全 ──
+# hadolint = "latest"
+# dive = "latest"                          # 跟 aqua:wagoodman/dive 是同一個,擇一
+# "aqua:aquasecurity/trivy" = "latest"
+# "aqua:nektos/act" = "latest"
+# opentofu = "latest"
+# sops = "latest"
+# age = "latest"
+# step = "latest"
+# k6 = "latest"
+# watchexec = "latest"
 # carapace = "latest"
-# difftastic = "latest"
+# ast-grep = "latest"
+
+# ── Protobuf / gRPC ──
+# protobuf = "latest"
+# protoc-gen-go = "latest"
+# protoc-gen-go-grpc = "latest"
+# "go:github.com/fullstorydev/grpcurl/cmd/grpcurl" = "latest"
+
+# ── 網路 ──
+# websocat = "latest"                      # 跟 aqua:vi/websocat 是同一個,擇一
+# cloudflared = "latest"
+# "aqua:mr-karan/doggo" = "latest"
+# "github:StackExchange/dnscontrol" = "latest"
+
+
+# ── Node(npm: backend,跟 node 版本脫鉤)──
+# "npm:prettier" = "latest"
+# "npm:eslint" = "latest"
+# "npm:typescript" = "latest"
+# "aqua:pnpm/pnpm" = "latest"
+
+# ── 效能 / 觀測 ──
+# "cargo:flamegraph" = "latest"
+# sampler = "latest"
+# "aqua:imsnif/bandwhich" = "latest"
+
+# ── 其他 / 雜項 ──
+# tmux = "latest"
+# "aqua:maaslalani/slides" = "latest"
+# "aqua:tealdeer-rs/tealdeer" = "latest"
+# "aqua:ericchiang/pup" = "latest"
+# "aqua:boyter/scc" = "latest"
+# "aqua:o2sh/onefetch" = "latest"
+# "aqua:fastfetch-cli/fastfetch" = "latest"
+# "aqua:linebender/resvg" = "latest"
+# "aqua:j178/prek" = "latest"
+# "github:upx/upx" = "latest"
+# "github:mufeedvh/code2prompt" = "latest"
+# "github:sheeki03/tirith" = "latest"
+# rtk = "latest"
