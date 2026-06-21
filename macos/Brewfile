@@ -1,23 +1,39 @@
-tap "cloudflare/cloudflare"
+tap "cloudflare/cloudflare", trusted: true
 tap "lightpanda-io/browser"
 tap "linzeyan/tools"
 tap "rs/tap"
+# Run your GitHub Actions locally
+brew "act"
+# Simple, modern, secure file encryption
+brew "age"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
+# Code searching, linting, rewriting
+brew "ast-grep"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Parser generator
 brew "bison"
 # Core application library for C
 brew "glib"
+# Multi-shell multi-command argument completer
+brew "carapace"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
+# CLI tool to convert your codebase into a single LLM prompt
+brew "code2prompt"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# JSON, YAML, TOML, XML, and CSV query and modification tool
+brew "dasel"
 # Perform a dhcp-request to check whether a dhcp-server is running
 brew "dhcping"
 # GNU Transport Layer Security (TLS) Library
@@ -30,10 +46,30 @@ brew "gnupg"
 brew "poppler"
 # Visually compare two PDF files
 brew "diff-pdf"
+# Diff that understands syntax
+brew "difftastic"
 # Load/unload environment variables based on $PWD
 brew "direnv"
+# Tool for exploring each layer in a docker image
+brew "dive"
+# Synchronize your DNS to multiple providers from a simple DSL
+brew "dnscontrol"
+# Command-line DNS Client for Humans
+brew "doggo"
+# More intuitive version of du in rust
+brew "dust"
 # Program that can automate interactive applications
 brew "expect"
+# Modern, maintained replacement for ls
+brew "eza"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Terminal JSON viewer
+brew "fx"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GNU compiler collection
 brew "gcc"
 # Library for encoding and decoding .avif files
@@ -46,6 +82,10 @@ brew "gdbm"
 brew "gdk-pixbuf"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Render markdown on the CLI
+brew "glow"
 # Image manipulation
 brew "netpbm"
 # OpenType text shaping engine
@@ -54,6 +94,8 @@ brew "harfbuzz"
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
 # Improved top (interactive process viewer)
 brew "htop"
 # Tools and libraries to manipulate images in select formats
@@ -64,6 +106,8 @@ brew "ipcalc"
 brew "iproute2mac"
 # New file format for still image compression
 brew "jpeg-xl"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Image processing and image analysis library
 brew "leptonica"
 # Portable Foreign Function Interface library
@@ -82,22 +126,54 @@ brew "mise"
 brew "mkcert"
 # Deep clean and optimize your Mac
 brew "mole"
+# Command-line Git information tool
+brew "onefetch"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Wrapper around ripgrep that adds multiple rich file types
+brew "ripgrep-all"
 # Utility that provides fast incremental file transfer
 brew "rsync"
+# CLI proxy to minimize LLM token consumption
+brew "rtk"
+# Terminal based presentation tool
+brew "slides"
+# Editor of encrypted files
+brew "sops"
+# Crypto and x509 Swiss-Army-Knife
+brew "step"
 # Easiest, most secure way to use WireGuard and 2FA
 brew "tailscale"
 # Traceroute implementation using TCP packets
 brew "tcptraceroute"
 # OCR (Optical Character Recognition) engine
 brew "tesseract"
+# Detect terminal injection, homograph, and pipe-to-shell attacks
+brew "tirith"
+# Terminal multiplexer
+brew "tmux"
 # Anonymizing overlay network for TCP
 brew "tor"
+# Vulnerability scanner for container images, file systems, and Git repos
+brew "trivy"
+# Compress/expand executable files
+brew "upx"
 # HTTP load testing tool and library
 brew "vegeta"
+# Execute commands when watched files change
+brew "watchexec"
+# Command-line client for WebSockets
+brew "websocat"
 # Internet file retriever
 brew "wget"
 # Tools for the WireGuard secure network tunnel
 brew "wireguard-tools"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Headless browser for AI agents and automation (nightly build)
@@ -247,11 +323,19 @@ go "cmd/go"
 go "cmd/gofmt"
 go "mvdan.cc/gofumpt"
 go "golang.org/x/tools/gopls"
+cargo "diskus"
+cargo "flamegraph"
+cargo "ouch"
+cargo "tealdeer"
 uv "huggingface-hub", with: ["hf-xet"]
 uv "litellm[proxy]"
 uv "mflux"
 uv "mlx"
 uv "mlx-gen"
 uv "mlx-lm", with: ["transformers git+https://github.com/huggingface/transformers.git"]
+uv "mlx-video", with: ["torch"]
 npm "corepack"
+npm "eslint"
 npm "html-minifier-terser"
+npm "prettier"
+npm "typescript"
