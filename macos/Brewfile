@@ -30,6 +30,8 @@ brew "clang-format"
 brew "cloudflared"
 # CLI tool to convert your codebase into a single LLM prompt
 brew "code2prompt"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # JSON, YAML, TOML, XML, and CSV query and modification tool
@@ -195,8 +197,6 @@ cask "cloudflare-warp"
 cask "comfy"
 # Server and cloud storage browser
 cask "cyberduck"
-# Virtual monitor for screen sharing
-cask "deskpad"
 # Web browser
 cask "firefox", args: { appdir: "/Applications" }
 cask "font-fira-code-nerd-font"
@@ -230,8 +230,6 @@ cask "snipaste", args: { appdir: "/Applications" }
 cask "tailscale-app"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
-# Disposable email client
-cask "tempbox"
 # Unpacks archive files
 cask "the-unarchiver", args: { appdir: "/Applications" }
 # Open-source code editor
@@ -244,6 +242,7 @@ mas "Keynote", id: 361285480
 mas "LINE", id: 539883307
 mas "Numbers", id: 361304891
 mas "Pages", id: 361309726
+mas "Transporter", id: 1450874784
 mas "Xcode", id: 497799835
 vscode "adpyke.codesnap"
 vscode "ahmadalli.vscode-nginx-conf"
@@ -333,6 +332,7 @@ uv "mflux"
 uv "mlx"
 uv "mlx-gen"
 uv "mlx-lm", with: ["transformers git+https://github.com/huggingface/transformers.git"]
+uv "mlx-openai-server"
 uv "mlx-video", with: ["torch"]
 npm "corepack"
 npm "eslint"

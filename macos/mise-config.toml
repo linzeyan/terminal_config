@@ -2,18 +2,21 @@
 
 [tools]
 # ── 語言 runtime ──────────────────────────────────────────────
-go     = "latest"   # 註:go: 工具會跟著它重新編譯,要可重現可改釘版本
-node   = "22"
+go = "latest"       # 註:go: 工具會跟著它重新編譯,要可重現可改釘版本
+node = "22"
 python = "3.12"
-rust   = "stable"
-uv     = "latest"
+rust = "stable"
+uv = "latest"
+bun = "latest"
+xcodegen = "latest"
+xcodes = "latest"
 
 # ── Go 開發工具(用 active Go 從原始碼編譯)────────────────────
-"go:golang.org/x/tools/gopls"          = "latest"   # 建議維持 go:,讓它對齊你的 Go 版本
-"go:golang.org/x/tools/cmd/deadcode"   = "latest"
+"go:golang.org/x/tools/gopls" = "latest"          # 建議維持 go:,讓它對齊你的 Go 版本
+"go:golang.org/x/tools/cmd/deadcode" = "latest"
 "go:golang.org/x/vuln/cmd/govulncheck" = "latest"
 "go:github.com/go-delve/delve/cmd/dlv" = "latest"
-"go:mvdan.cc/gofumpt"                  = "latest"   # 想要預編譯版可改成: gofumpt = "latest"
+"go:mvdan.cc/gofumpt" = "latest"                  # 想要預編譯版可改成: gofumpt = "latest"
 # "go:golang.org/x/perf/cmd/benchstat" = "latest"
 # "go:github.com/openrdap/rdap/cmd/rdap" = "master"
 # "go:github.com/google/capslock/cmd/capslock" = "latest"
@@ -22,14 +25,14 @@ uv     = "latest"
 # "github:golang-migrate/migrate" = "latest"
 
 # ── 一般 CLI(registry → aqua 預編譯)──────────────────────────
-git-cliff     = "latest"
+git-cliff = "latest"
 golangci-lint = "latest"
-goreleaser    = "latest"
-killport      = "latest"
+goreleaser = "latest"
+killport = "latest"
 hugo-extended = "0.148.2"
-shfmt         = "latest"   # 原本的 aqua:mvdan/sh,registry 短名就是 shfmt
-tssh          = "latest"   # 原本的 aqua:trzsz/trzsz-ssh
-vivid         = "latest"   # 原本的 aqua:sharkdp/vivid
+shfmt = "latest"          # 原本的 aqua:mvdan/sh,registry 短名就是 shfmt
+tssh = "latest"           # 原本的 aqua:trzsz/trzsz-ssh
+vivid = "latest"          # 原本的 aqua:sharkdp/vivid
 
 
 # ════════════════════════════════════════════════════════════════
