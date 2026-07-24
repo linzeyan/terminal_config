@@ -20,6 +20,8 @@ brew "openssl@3"
 brew "bat"
 # Parser generator
 brew "bison"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
 # Core application library for C
 brew "glib"
 # Multi-shell multi-command argument completer
@@ -32,6 +34,8 @@ brew "cloudflared"
 brew "code2prompt"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Securely send things from one computer to another
+brew "croc"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # JSON, YAML, TOML, XML, and CSV query and modification tool
@@ -68,6 +72,8 @@ brew "eza"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
 # Terminal JSON viewer
 brew "fx"
 # Command-line fuzzy finder written in Go
@@ -112,8 +118,6 @@ brew "jpeg-xl"
 brew "jq"
 # Image processing and image analysis library
 brew "leptonica"
-# Portable Foreign Function Interface library
-brew "libffi"
 # C library SSHv1/SSHv2 client and server protocols
 brew "libssh"
 # YAML Parser
@@ -189,8 +193,6 @@ brew "rs/tap/jplot", trusted: true
 cask "battery"
 # 3D creation suite
 cask "blender"
-# Terminal-based AI coding assistant
-cask "claude-code"
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
 # Node-based image, video and audio generator
@@ -212,6 +214,8 @@ cask "knockknock"
 cask "locationsimulator"
 # Open-source firewall to block unknown outgoing connections
 cask "lulu"
+# Screenshot and screen recording tool
+cask "macshot"
 # Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
 # Free and open-source RSS reader
@@ -331,9 +335,9 @@ uv "litellm[proxy]"
 uv "mflux"
 uv "mlx"
 uv "mlx-gen"
-uv "mlx-lm", with: ["transformers git+https://github.com/huggingface/transformers.git"]
-uv "mlx-openai-server"
-uv "mlx-video", with: ["torch"]
+uv "mlx-lm", with: ["transformers git+https://github.com/huggingface/transformers.git"], source: "git+https://github.com/ml-explore/mlx-lm.git@refs/pull/1192/head"
+uv "mlx-openai-server", source: "git+https://github.com/cubist38/mlx-openai-server.git"
+uv "mlx-video", with: ["torch"], source: "git+https://github.com/Blaizzy/mlx-video.git"
 npm "corepack"
 npm "eslint"
 npm "html-minifier-terser"

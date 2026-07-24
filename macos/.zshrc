@@ -193,21 +193,4 @@ esac
 # 可提高 GitHub API Rate Limit
 # export GITHUB_TOKEN="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
-## Claude Code Wrapper
-claude() {
-  CLAUDE_CODE_AUTO_COMPACT_WINDOW=400000 command claude "$@"
-}
-
-agent() {
-  ANTHROPIC_BASE_URL='http://127.0.0.1:9981' \
-  ANTHROPIC_AUTH_TOKEN='' \
-  ANTHROPIC_DEFAULT_OPUS_MODEL='fusion' \
-  ANTHROPIC_DEFAULT_SONNET_MODEL='Qwen3-Coder-30B-A3B-Instruct-8bit' \
-  ANTHROPIC_DEFAULT_HAIKU_MODEL='gemma-4-31b-it-4bit' \
-  API_TIMEOUT_MS=3000000 \
-  CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1 \
-  CLAUDE_CODE_AUTO_COMPACT_WINDOW=400000 \
-  command claude "$@"
-}
-
 . "$HOME/.local/bin/env"
