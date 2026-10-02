@@ -33,6 +33,17 @@ hugo-extended = "0.148.2"
 shfmt = "latest"          # 原本的 aqua:mvdan/sh,registry 短名就是 shfmt
 tssh = "latest"           # 原本的 aqua:trzsz/trzsz-ssh
 vivid = "latest"          # 原本的 aqua:sharkdp/vivid
+"aqua:pnpm/pnpm" = "11.5.3"
+"aqua:boyter/scc" = "latest"
+dotnet = "latest"
+gcloud = "latest"
+rtk = "latest"
+tokei = "latest"
+rust-analyzer = "latest"
+terraform-ls = "latest"
+lua-language-server = "latest"
+"npm:bash-language-server" = "latest"   # poly 的 lens-probe 要它
+"pipx:vulture" = "latest"               # poly deadcode 的 Python 那半(pipx backend 走 uv)
 
 
 # ════════════════════════════════════════════════════════════════

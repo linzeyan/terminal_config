@@ -1,5 +1,5 @@
 tap "cloudflare/cloudflare", trusted: true
-tap "lightpanda-io/browser"
+tap "dmtrkovalenko/fff", "https://github.com/dmtrKovalenko/homebrew-fff"
 tap "linzeyan/tools"
 tap "rs/tap"
 # Run your GitHub Actions locally
@@ -15,9 +15,11 @@ brew "automake"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
 # Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
+brew "openssl@3", link: true
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Compiler infrastructure and toolchain library for WebAssembly
+brew "binaryen"
 # Parser generator
 brew "bison"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
@@ -28,6 +30,8 @@ brew "glib"
 brew "carapace"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
+# Tool for emulating mouse and keyboard events
+brew "cliclick"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # CLI tool to convert your codebase into a single LLM prompt
@@ -122,6 +126,10 @@ brew "leptonica"
 brew "libssh"
 # YAML Parser
 brew "libyaml"
+# Next-gen compiler infrastructure
+brew "llvm"
+# LLVM Project Linker
+brew "lld"
 # Tools for zmodem/xmodem/ymodem file transfer
 brew "lrzsz"
 # Mac App Store command-line interface
@@ -132,10 +140,14 @@ brew "mise"
 brew "mkcert"
 # Deep clean and optimize your Mac
 brew "mole"
+# Windows installer (.MSI) tool
+brew "msitools"
 # Command-line Git information tool
 brew "onefetch"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Show ps output as a tree
+brew "pstree"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Wrapper around ripgrep that adds multiple rich file types
@@ -150,6 +162,8 @@ brew "slides"
 brew "sops"
 # Crypto and x509 Swiss-Army-Knife
 brew "step"
+# Tool to enforce Swift style and conventions
+brew "swiftlint"
 # Easiest, most secure way to use WireGuard and 2FA
 brew "tailscale"
 # Traceroute implementation using TCP packets
@@ -164,6 +178,8 @@ brew "tmux"
 brew "tor"
 # Vulnerability scanner for container images, file systems, and Git repos
 brew "trivy"
+# Build, bundle & ship your Rust WASM application to the web
+brew "trunk"
 # Compress/expand executable files
 brew "upx"
 # HTTP load testing tool and library
@@ -182,8 +198,8 @@ brew "yq"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Headless browser for AI agents and automation (nightly build)
-brew "lightpanda-io/browser/lightpanda", trusted: true
+# Fast file search toolkit for AI agents (MCP server)
+brew "dmtrkovalenko/fff/fff-mcp", trusted: true
 brew "linzeyan/tools/ops-cli", trusted: true
 # JSON Aggregation CLI
 brew "rs/tap/jaggr", trusted: true
@@ -218,24 +234,24 @@ cask "lulu"
 cask "macshot"
 # Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
-# Free and open-source RSS reader
-cask "netnewswire"
 # Replacement for Docker Desktop
 cask "orbstack"
 # Collaboration platform for API development
 cask "postman"
 # HTTP debugging proxy
 cask "proxyman"
+# Open source virtual/remote desktop application
+cask "rustdesk"
 # MySQL/MariaDB database management
 cask "sequel-ace"
-# Snip or pin screenshots
-cask "snipaste", args: { appdir: "/Applications" }
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # Unpacks archive files
 cask "the-unarchiver", args: { appdir: "/Applications" }
+# Virtual machines UI using QEMU
+cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
 mas "AdBlocker", id: 1018301773
@@ -248,84 +264,31 @@ mas "Numbers", id: 361304891
 mas "Pages", id: 361309726
 mas "Transporter", id: 1450874784
 mas "Xcode", id: 497799835
-vscode "adpyke.codesnap"
-vscode "ahmadalli.vscode-nginx-conf"
-vscode "alfredbirk.go-to-next-change"
 vscode "anthropic.claude-code"
-vscode "arjun.swagger-viewer"
-vscode "bierner.markdown-mermaid"
-vscode "bierner.markdown-preview-github-styles"
-vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
-vscode "christian-kohler.path-intellisense"
+vscode "charliermarsh.ruff"
 vscode "cipchk.zh-hans-tt-hant-vscode"
-vscode "continue.continue"
-vscode "dustypomerleau.rust-syntax"
-vscode "eamodio.gitlens"
-vscode "editorconfig.editorconfig"
-vscode "emeraldwalk.runonsave"
-vscode "eriklynd.json-tools"
-vscode "esbenp.prettier-vscode"
-vscode "exiasr.hadolint"
-vscode "ezforo.copy-relative-path-and-line-numbers"
 vscode "fill-labs.dependi"
 vscode "formulahendry.code-runner"
-vscode "foxundermoon.shell-format"
-vscode "github.copilot-chat"
 vscode "golang.go"
-vscode "google.geminicodeassist"
-vscode "graphql.vscode-graphql"
-vscode "graphql.vscode-graphql-syntax"
-vscode "gruntfuggly.todo-tree"
-vscode "hashicorp.hcl"
-vscode "hashicorp.terraform"
-vscode "hediet.vscode-drawio"
 vscode "huacnlee.autocorrect"
-vscode "inferrinizzard.prettier-sql-vscode"
-vscode "jebbs.plantuml"
-vscode "jinliming2.vscode-go-template"
-vscode "kejun.devtoys"
-vscode "kisstkondoros.vscode-gutter-preview"
-vscode "koihik.vscode-lua-format"
-vscode "llvm-vs-code-extensions.lldb-dap"
-vscode "llvm-vs-code-extensions.vscode-clangd"
-vscode "lunuan.kubernetes-templates"
-vscode "mechatroner.rainbow-csv"
 vscode "mhutchie.git-graph"
-vscode "mikestead.dotenv"
 vscode "ms-ceintl.vscode-language-pack-zh-hant"
-vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
-vscode "mushan.vscode-paste-image"
-vscode "nhoizey.gremlins"
-vscode "oderwat.indent-rainbow"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "openai.chatgpt"
 vscode "pkief.material-icon-theme"
-vscode "pomdtr.excalidraw-editor"
-vscode "quicktype.quicktype"
-vscode "randomfractalsinc.vscode-data-preview"
-vscode "redhat.vscode-xml"
-vscode "redhat.vscode-yaml"
+vscode "ricky.poly-lsp"
+vscode "ricky.poly-syntax-highlight"
 vscode "rust-lang.rust-analyzer"
-vscode "shardulm94.trailing-spaces"
-vscode "streetsidesoftware.code-spell-checker"
-vscode "sumneko.lua"
-vscode "svelte.svelte-vscode"
-vscode "swiftlang.swift-vscode"
-vscode "tamasfe.even-better-toml"
-vscode "tauri-apps.tauri-vscode"
-vscode "tim-koehler.helm-intellisense"
-vscode "tombonnike.vscode-status-bar-format-toggle"
-vscode "tooltitudeteam.tooltitude"
-vscode "tooltitudeteam.tooltitude-pb"
 vscode "usernamehw.errorlens"
-vscode "vscode-icons-team.vscode-icons"
-vscode "yzane.markdown-pdf"
-vscode "yzhang.markdown-all-in-one"
-vscode "zainchen.json"
-vscode "ziglang.vscode-zig"
+go "github.com/go-delve/delve/cmd/dlv"
 go "cmd/go"
 go "cmd/gofmt"
-go "mvdan.cc/gofumpt"
+go "github.com/golangci/golangci-lint/v2/cmd/golangci-lint"
 go "golang.org/x/tools/gopls"
+cargo "cargo-xwin"
 cargo "diskus"
 cargo "flamegraph"
 cargo "ouch"
@@ -338,6 +301,8 @@ uv "mlx-gen"
 uv "mlx-lm", with: ["transformers git+https://github.com/huggingface/transformers.git"], source: "git+https://github.com/ml-explore/mlx-lm.git@refs/pull/1192/head"
 uv "mlx-openai-server", source: "git+https://github.com/cubist38/mlx-openai-server.git"
 uv "mlx-video", with: ["torch"], source: "git+https://github.com/Blaizzy/mlx-video.git"
+npm "@colbymchenry/codegraph"
+npm "@dbx-app/mcp-server"
 npm "corepack"
 npm "eslint"
 npm "html-minifier-terser"

@@ -47,6 +47,8 @@ fi
 
 ## 載入 Zim
 source ${ZIM_HOME}/init.zsh
+## 必須在 Zim 之後：environment 模組會 setopt NO_CLOBBER，放在前面會被蓋掉
+unsetopt noclobber # 使用 > 覆寫已存在的檔案
 ## 載入 Powerlevel10k 主題
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # ==================================================
